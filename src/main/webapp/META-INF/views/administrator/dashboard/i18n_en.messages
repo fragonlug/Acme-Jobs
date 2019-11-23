@@ -1,0 +1,14 @@
+administrator.dashboard.form.title.chartInverstors = Amount of inverstors by sectors:
+administrator.dashboard.form.title.chartCompanys = Amount of companys by sectors:
+administrator.dashboard.form.label.totalAnnouncement= Total of announcements:
+administrator.dashboard.form.label.totalInvestorsRecord= Total of investors records:
+administrator.dashboard.form.label.totalCompanyRecords= Total of companys records:
+administrator.dashboard.form.label.minRewardRequest= Amount of lower reward of a request: 
+administrator.dashboard.form.label.maxRewardRequest= Amount of the biggest reward of a request:
+administrator.dashboard.form.label.minRewardOffers= Amount of the lower reward of a offer:
+administrator.dashboard.form.label.maxRewardOffers= Amount of the biggest reward of a offer:
+administrator.dashboard.form.label.mediaRequest= Average of requests reward:
+administrator.dashboard.form.label.mediaOffer= Average of offers reward:
+administrator.dashboard.form.label.stdevRequest= Standard deviation of requests reward:
+administrator.dashboard.form.label.stdevOffer= Standard deviation of offers reward:
+administrator.configuration.form.label.button.return = Return
