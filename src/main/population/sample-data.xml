@@ -312,7 +312,7 @@
 		<property name="salary" value="€ 15,000.00"/>
 		<property name="description" value="Lorem ipsum sit dolor amet"/>
 		<property name="moreInfo" value="https://www.example.es/"/>
-		<property name="finalMode" value="true"/>
+		<property name="finalMode" value="false"/>
 		<property name="employer" ref="employer1Employer"/>
 	</bean>
 	

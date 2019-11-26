@@ -18,13 +18,13 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>546</x>
+      <x>476</x>
       <y>203</y>
-      <w>70</w>
-      <h>77</h>
+      <w>140</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>180.0;10.0;10.0;40.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -74,13 +74,13 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>595</x>
+      <x>504</x>
       <y>203</y>
-      <w>70</w>
-      <h>77</h>
+      <w>112</w>
+      <h>119</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;80.0;90.0</additional_attributes>
+    <additional_attributes>140.0;10.0;10.0;150.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -179,8 +179,8 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>448</x>
-      <y>266</y>
+      <x>378</x>
+      <y>231</y>
       <w>140</w>
       <h>63</h>
     </coordinates>
@@ -194,8 +194,8 @@ Provider
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>609</x>
-      <y>266</y>
+      <x>469</x>
+      <y>308</y>
       <w>147</w>
       <h>63</h>
     </coordinates>
@@ -299,8 +299,8 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>238</x>
-      <y>287</y>
+      <x>203</x>
+      <y>273</y>
       <w>168</w>
       <h>63</h>
     </coordinates>
@@ -327,13 +327,13 @@ has v</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>245</x>
-      <y>336</y>
-      <w>91</w>
-      <h>77</h>
+      <y>329</y>
+      <w>77</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;90.0;80.0;10.0</additional_attributes>
+    <additional_attributes>10.0;100.0;50.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -352,19 +352,19 @@ has v</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>336</x>
-      <y>336</y>
-      <w>84</w>
-      <h>77</h>
+      <x>287</x>
+      <y>329</y>
+      <w>98</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
-    <additional_attributes>70.0;90.0;10.0;10.0</additional_attributes>
+    <additional_attributes>120.0;100.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>308</x>
+      <x>294</x>
       <y>399</y>
       <w>161</w>
       <h>35</h>
@@ -415,7 +415,7 @@ has v</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>504</x>
-      <y>469</y>
+      <y>560</y>
       <w>175</w>
       <h>49</h>
     </coordinates>
@@ -428,8 +428,8 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>476</x>
-      <y>343</y>
+      <x>441</x>
+      <y>448</y>
       <w>196</w>
       <h>105</h>
     </coordinates>
@@ -447,8 +447,8 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>336</x>
-      <y>469</y>
+      <x>322</x>
+      <y>567</y>
       <w>154</w>
       <h>126</h>
     </coordinates>
@@ -469,7 +469,7 @@ has v</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>504</x>
-      <y>525</y>
+      <y>616</y>
       <w>154</w>
       <h>77</h>
     </coordinates>
@@ -484,8 +484,8 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>679</x>
-      <y>343</y>
+      <x>700</x>
+      <y>560</y>
       <w>189</w>
       <h>105</h>
     </coordinates>
@@ -503,8 +503,8 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>693</x>
-      <y>469</y>
+      <x>679</x>
+      <y>672</y>
       <w>245</w>
       <h>154</h>
     </coordinates>
@@ -522,5 +522,42 @@ has v</panel_attributes>
 / inverstorsBySector: List&lt;Integer&gt;	
 / sectorsOfInverstors: List&lt;String&gt;	</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>665</x>
+      <y>308</y>
+      <w>147</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Employer
+--
++comany: String {NotBlank}
++sector: String {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>14</x>
+      <y>7</y>
+      <w>133</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>595</x>
+      <y>203</y>
+      <w>154</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;150.0</additional_attributes>
   </element>
 </diagram>
