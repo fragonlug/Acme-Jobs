@@ -47,6 +47,7 @@ master.menu.authenticated.investorsrecord.list= List of investors records
 master.menu.authenticated.offer.list = List of offers
 master.menu.authenticated.challenge.list = List of challenges
 master.menu.authenticated.companyrecord.list= List of company records
+master.menu.authenticated.job.list = List of active jobs
 
 # master.menu.administrator ###################################################
 
