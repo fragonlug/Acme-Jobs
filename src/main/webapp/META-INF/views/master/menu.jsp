@@ -94,7 +94,14 @@
 		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')">
 			<acme:menu-suboption code="master.menu.employer.jobList" action="/employer/job/list_mine"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">
+			
+		</acme:menu-option>
+	
 	</acme:menu-left>
+	
+	
 
 	<acme:menu-right>
 		<acme:menu-option code="master.menu.sign-up" action="/anonymous/user-account/create" access="isAnonymous()"/>

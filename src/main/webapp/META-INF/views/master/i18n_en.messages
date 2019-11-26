@@ -39,6 +39,7 @@ master.menu.anonymous.topinvestorsrecords.list= List of top investors records
 
 
 # master.menu.authenticated ########################################################
+
 master.menu.authenticated= Authenticated
 master.menu.authenticated.announcement.list= List of announcements
 master.menu.authenticated.announcement.form= Create Announcement
@@ -89,6 +90,10 @@ master.menu.consumer.OfferCreate = Create an offer
 
 master.menu.employer = Employer
 master.menu.employer.jobList = List of jobs
+
+# master.menu.worker ##########################################################
+
+master.menu.worker = Worker
 
 # master.menu.user-account ####################################################
 
