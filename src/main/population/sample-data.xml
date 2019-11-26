@@ -347,20 +347,20 @@
 	</bean>
 	
 	<bean id="job2" class="acme.entities.jobs.Job">
-		<property name="reference" value="EMP1-JOB2"/>
+		<property name="reference" value="EMP2-JOB1"/>
 		<property name="title" value="Title 2"/>
-		<property name="deadline" value="2030/12/11 23:59"/>
-		<property name="salary" value="€ 15,000.00"/>
+		<property name="deadline" value="2025/12/11 23:59"/>
+		<property name="salary" value="€ 2,000.10"/>
 		<property name="description" value="Lorem ipsum sit dolor amet"/>
 		<property name="moreInfo" value="https://www.example.es/"/>
 		<property name="finalMode" value="true"/>
-		<property name="employer" ref="employer1Employer"/>
+		<property name="employer" ref="employer2Employer"/>
 	</bean>
 	
 	<bean id="job3" class="acme.entities.jobs.Job">
-		<property name="reference" value="EMP1-JOB3"/>
+		<property name="reference" value="EMP1-JOB2"/>
 		<property name="title" value="Title 3"/>
-		<property name="deadline" value="2030/12/11 23:59"/>
+		<property name="deadline" value="2024/11/01 23:59"/>
 		<property name="salary" value="€ 15,000.00"/>
 		<property name="description" value="Lorem ipsum sit dolor amet"/>
 		<property name="moreInfo" value="https://www.example.es/"/>
@@ -369,21 +369,21 @@
 	</bean>
 	
 	<bean id="job4" class="acme.entities.jobs.Job">
-		<property name="reference" value="EMP1-JOB4"/>
+		<property name="reference" value="EMP2-JOB2"/>
 		<property name="title" value="Title 4"/>
-		<property name="deadline" value="2030/12/11 23:59"/>
-		<property name="salary" value="€ 15,000.00"/>
+		<property name="deadline" value="2029/12/11 12:59"/>
+		<property name="salary" value="€ 900,000.00"/>
 		<property name="description" value="Lorem ipsum sit dolor amet"/>
 		<property name="moreInfo" value="https://www.example.es/"/>
 		<property name="finalMode" value="true"/>
-		<property name="employer" ref="employer1Employer"/>
+		<property name="employer" ref="employer2Employer"/>
 	</bean>
 	
 	<bean id="job5" class="acme.entities.jobs.Job">
-		<property name="reference" value="EMP1-JOB5"/>
+		<property name="reference" value="EMP1-JOB3"/>
 		<property name="title" value="Title 5"/>
-		<property name="deadline" value="2030/12/11 23:59"/>
-		<property name="salary" value="€ 15,000.00"/>
+		<property name="deadline" value="2015/12/11 23:59"/>
+		<property name="salary" value="€ 100.00"/>
 		<property name="description" value="Lorem ipsum sit dolor amet"/>
 		<property name="moreInfo" value="https://www.example.es/"/>
 		<property name="finalMode" value="true"/>
