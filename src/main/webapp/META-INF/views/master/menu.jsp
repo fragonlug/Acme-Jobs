@@ -39,6 +39,8 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.investorsrecord.list" action="/authenticated/investorsrecords/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.companyrecord.list" action="/authenticated/companyrecord/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.authenticated.job.list" action="/authenticated/job/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
