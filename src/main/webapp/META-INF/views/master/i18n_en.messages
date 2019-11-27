@@ -89,12 +89,13 @@ master.menu.consumer.OfferCreate = Create an offer
 # master.menu.employer ##########################################################
 
 master.menu.employer = Employer
-master.menu.employer.jobList = List of jobs
+master.menu.employer.jobList = List of my jobs
+master.menu.employer.applicationList = List of applications to my jobs
 
 # master.menu.worker ##########################################################
 
 master.menu.worker = Worker
-master.menu.employer.applicationList = List of my applications
+master.menu.worker.applicationList = List of my applications
 
 # master.menu.user-account ####################################################
 

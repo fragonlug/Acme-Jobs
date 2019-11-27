@@ -93,10 +93,11 @@
 		
 		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')">
 			<acme:menu-suboption code="master.menu.employer.jobList" action="/employer/job/list_mine"/>
+			<acme:menu-suboption code="master.menu.employer.applicationList" action="/employer/application/list_mine"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">
-		<acme:menu-suboption code="master.menu.employer.applicationList" action="/worker/application/list_mine"/>
+		<acme:menu-suboption code="master.menu.worker.applicationList" action="/worker/application/list_mine"/>
 		</acme:menu-option>
 	
 	</acme:menu-left>
