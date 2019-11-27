@@ -38,6 +38,7 @@ master.menu.anonymous.topcompanyrecord.list = Lista de registros de las mejores 
 
 
 # master.menu.authenticated ########################################################
+
 master.menu.authenticated= Autentificado
 master.menu.authenticated.announcement.list= Lista de anuncios
 master.menu.authenticated.announcement.form= Crear anuncio
@@ -92,6 +93,7 @@ master.menu.employer.jobList = Lista de trabajos
 # master.menu.worker ##########################################################
 
 master.menu.worker = Trabajador
+master.menu.employer.applicationList = Lista de mis aplicaciones
 
 
 # master.menu.user-account ####################################################
