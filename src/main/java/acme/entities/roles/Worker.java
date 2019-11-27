@@ -2,6 +2,7 @@
 package acme.entities.roles;
 
 import javax.persistence.Entity;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import acme.framework.entities.UserRole;
@@ -20,9 +21,11 @@ public class Worker extends UserRole {
 	// Attributes -------------------------------------------------------------
 
 	@NotNull
-	private Double				qualificationRecord;
+	@NotBlank
+	private String				qualificationRecord;
 
 	@NotNull
-	private Double				skillRecord;
+	@NotBlank
+	private String				skillRecord;
 
 }
