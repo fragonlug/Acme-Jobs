@@ -50,4 +50,10 @@ public class Dashboard implements Serializable {
 
 	private Double						stdevOffer;
 
+	private List<Double>				jobsByFinalMode;
+
+	private List<String>				statusOfApplication;
+
+	private List<Double>				applicationByStatus;
+
 }
