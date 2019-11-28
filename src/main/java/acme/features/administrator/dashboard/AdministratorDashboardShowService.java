@@ -47,7 +47,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert model != null;
 
 		request.unbind(entity, model, "totalAnnouncement", "totalInvestorsRecord", "totalCompanyRecords", "minRewardRequest", "maxRewardRequest", "minRewardOffers", "maxRewardOffers", "companysBySector", "sectorsOfCompanys", "inverstorsBySector",
-			"sectorsOfInverstors", "mediaRequest", "mediaOffer", "stdevRequest", "stdevOffer");
+			"sectorsOfInverstors", "mediaRequest", "mediaOffer", "stdevRequest", "stdevOffer", "jobsByFinalMode", "statusOfApplication", "applicationByStatus");
 
 	}
 
