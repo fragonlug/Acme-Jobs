@@ -322,12 +322,18 @@
 				<ref bean="employer2Authenticated"/>
 			</list>
 		</property>
+		<property name="messagethread">
+			<list>
+				<ref bean="messagethread1"/>
+			</list>
+		</property>
 	</bean>
 	
 	<bean name="employer2Employer" class="acme.entities.roles.Employer">
 			<property name="company" value="Employer 2,Inc."/>
 			<property name="sector" value="Sector 2"/>
 			<property name="userAccount" ref="employer2UserAccount"/>
+			
 	</bean>
 	
 	<bean name="employer2Authenticated" class="acme.framework.entities.Authenticated">
@@ -351,6 +357,11 @@
 			<list>
 				<ref bean="worker1Worker"/>
 				<ref bean="worker1Authenticated"/>
+			</list>
+		</property>
+		<property name="messagethread">
+			<list>
+				<ref bean="messagethread1"/>
 			</list>
 		</property>
 	</bean>

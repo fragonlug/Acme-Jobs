@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
@@ -32,6 +33,7 @@ public class Messagethread extends DomainEntity {
 	//Relationships
 
 	@NotNull
+	@ManyToMany(mappedBy = "messagethread")
 	private Collection<UserAccount>	users;
 
 }
