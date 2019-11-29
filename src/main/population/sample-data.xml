@@ -480,6 +480,11 @@
 				<ref bean="worker1UserAccount"/>
 			</list>
 		</property>
+		<property name="messages">
+			<list>
+				<ref bean="message1"/>
+			</list>
+			</property>
 	</bean>
 
 </beans>
