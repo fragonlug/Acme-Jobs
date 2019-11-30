@@ -48,7 +48,7 @@ public class AuthenticatedMessagethreadShowService implements AbstractShowServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "moment", "users", "messages");
+		request.unbind(entity, model, "title", "moment");
 	}
 
 	@Override

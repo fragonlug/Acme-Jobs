@@ -37,8 +37,9 @@
         `version` integer not null,
         `body` varchar(255),
         `moment` datetime(6),
-        `status` varchar(255),
+        `status` bit,
         `title` varchar(255),
+        `job_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -276,6 +277,11 @@
        add constraint FK_clqcq9lyspxdxcp6o4f3vkelj 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `auditrecord` 
+       add constraint `FKa5p4w0gnuwmtb07juvrg8ptn6` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
 
     alter table `authenticated` 
        add constraint FK_h52w0f3wjoi68b63wv9vwon57 

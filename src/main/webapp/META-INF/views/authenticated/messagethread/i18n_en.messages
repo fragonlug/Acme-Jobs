@@ -1,14 +1,8 @@
-authenticated.job.list.label.reference = Reference
-authenticated.job.list.label.deadline = Dead-Line
-authenticated.job.list.label.title = Title
+authenticated.messagethread.list.label.moment = Moment
+authenticated.messagethread.list.label.title = Title
 
-
-authenticated.job.form.label.reference = Reference:
-authenticated.job.form.label.title = Title:
-authenticated.job.form.label.deadline = Dead-Line:
-authenticated.job.form.label.salary = Salary:
-authenticated.job.form.label.moreInfo = More info:
-authenticated.job.form.label.description = Description:
-authenticated.job.form.label.button.return = Return
+authenticated.messagethread.form.label.title = Title:
+authenticated.messagethread.form.label.moment = Moment:
+authenticated.messagethread.form.label.button.return = Return
 
 

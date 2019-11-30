@@ -11,6 +11,10 @@
        drop 
        foreign key FK_clqcq9lyspxdxcp6o4f3vkelj;
 
+    alter table `auditrecord` 
+       drop 
+       foreign key `FKa5p4w0gnuwmtb07juvrg8ptn6`;
+
     alter table `authenticated` 
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;

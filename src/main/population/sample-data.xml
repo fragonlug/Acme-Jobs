@@ -462,6 +462,36 @@
 		<property name="employer" ref="employer1Employer"/>
 	</bean>
 	
+		<!-- Audit records -->
+	<bean id="auditrecord1" class="acme.entities.auditrecords.Auditrecord">
+		<property name="title" value="Audit record 1"/>
+		<property name="status" value="true"/>
+		<property name="moment" value="2019/11/27 17:00"/>
+		<property name="body" value="Example of audit record"/>
+		<property name="job" ref="job1"/>
+	</bean>
+	<bean id="auditrecord2" class="acme.entities.auditrecords.Auditrecord">
+		<property name="title" value="Audit record 2"/>
+		<property name="status" value="false"/>
+		<property name="moment" value="2018/12/10 17:00"/>
+		<property name="body" value="Example of audit record"/>
+		<property name="job" ref="job1"/>
+	</bean>
+	<bean id="auditrecord3" class="acme.entities.auditrecords.Auditrecord">
+		<property name="title" value="Audit record 3"/>
+		<property name="status" value="true"/>
+		<property name="moment" value="2019/11/29 17:00"/>
+		<property name="body" value="Example of audit record"/>
+		<property name="job" ref="job2"/>
+	</bean>
+	<bean id="auditrecord4" class="acme.entities.auditrecords.Auditrecord">
+		<property name="title" value="Audit record 4"/>
+		<property name="status" value="false"/>
+		<property name="moment" value="2018/11/30 19:00"/>
+		<property name="body" value="Example of audit record"/>
+		<property name="job" ref="job3"/>
+	</bean>
+	
 	<!-- Messages & threads -->
 	<bean id="message1" class="acme.entities.messages.Message">
 		<property name="title" value="Mensaje 1"/>

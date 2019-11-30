@@ -4,11 +4,14 @@ package acme.entities.auditrecords;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import acme.entities.jobs.Job;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,8 +26,8 @@ public class Auditrecord extends DomainEntity {
 	@NotBlank
 	private String				title;
 
-	@NotBlank
-	private String				status;
+	@NotNull
+	private Boolean				status;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
@@ -32,5 +35,12 @@ public class Auditrecord extends DomainEntity {
 
 	@NotBlank
 	private String				body;
+
+	//	Relationships -------------------------------------------------------------------------
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Job					job;
 
 }

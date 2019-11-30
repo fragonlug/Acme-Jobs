@@ -18,7 +18,7 @@
 
 <tiles-definitions>
 
-	<definition name="authenticated/messagethreadlist" extends="master">		
+	<definition name="authenticated/messagethread/list" extends="master">		
 		<put-attribute name="body" type="template" value="../authenticated/messagethread/list.jsp" />
 	</definition>
 	

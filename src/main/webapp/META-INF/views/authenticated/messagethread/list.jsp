@@ -16,8 +16,8 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="authenticated.messagethread.list.label.title" path="title" width="30%"/>		
-	<acme:list-column code="authenticated.messagethread.list.label.moment" path="moment" width="30%"/>	
-	<acme:list-column code="authenticated.messagethread.list.label.users" path="users" width="20%"/>	
-	<acme:list-column code="authenticated.messagethread.list.label.messages" path="messages" width="20%"/>	
+	<acme:list-column code="authenticated.messagethread.list.label.title" path="title" width="50%"/>		
+	<acme:list-column code="authenticated.messagethread.list.label.moment" path="moment" width="50%"/>	
+
 </acme:list>
+<!-- http://localhost:8081/acme-jobs/authenticated/messagethread/list_mine -->
