@@ -9,7 +9,7 @@
 	<acme:form-textarea code="authenticated.messagethread.form.label.usernames" path="usernames"/>
 	<acme:form-textarea code="authenticated.messagethread.form.label.message" path="message"/>
 	<jstl:set var="id" value="${id}"/>
-	<acme:menu-suboption code="authenticated.messagethread.form.label.listMessage" action="/authenticated/message/list_mine?id=${id}"/>
+	<h4><acme:menu-suboption code="authenticated.messagethread.form.label.listMessage" action="/authenticated/message/list_mine?id=${id}"/></h4>
 
 	<acme:form-return code="authenticated.messagethread.form.label.button.return"/>
 	

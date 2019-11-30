@@ -69,22 +69,37 @@ public class AuthenticatedMessagethreadShowService implements AbstractShowServic
 
 		for (UserAccount us : result.getUsers()) {
 			if (i == 0) {
-				users = us.getUsername() + ",";
-				i++;
+				if (result.getUsers().size() == 1) {
+					users = us.getUsername();
+				} else {
+					users = us.getUsername() + ", ";
+				}
 			} else {
-				users = users + us.getUsername() + ",";
-			}
+				if (i == result.getUsers().size() - 1) {
+					users = users + us.getUsername();
 
+				} else {
+					users = users + us.getUsername() + ", ";
+				}
+			}
+			i++;
 		}
 
 		for (Message ms : result.getMessages()) {
 			if (a == 0) {
-				messages = ms.getTitle() + ",";
-				a++;
+				if (result.getMessages().size() == 1) {
+					messages = ms.getTitle();
+				} else {
+					messages = ms.getTitle() + ", ";
+				}
 			} else {
-				messages = messages + ms.getTitle() + ",";
+				if (i == result.getMessages().size() - 1) {
+					messages = messages + ms.getTitle();
+				} else {
+					messages = messages + ms.getTitle() + ", ";
+				}
 			}
-
+			a++;
 		}
 
 		result.setMessage(messages);
