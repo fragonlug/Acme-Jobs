@@ -3,9 +3,7 @@ authenticated.messagethread.list.label.title = Título
 
 authenticated.messagethread.form.label.title = Título:
 authenticated.messagethread.form.label.moment = Momento:
-authenticated.messagethread.form.label.usernames = Usuarios:
-authenticated.messagethread.form.label.message = Mensajes:
+authenticated.messagethread.form.label.tags = Etiquetas:
+authenticated.messagethread.form.label.body = Cuerpo:
 authenticated.messagethread.form.label.button.return = Volver
-authenticated.messagethread.form.button.message= Lista de mensajes
-
 

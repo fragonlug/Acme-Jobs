@@ -3,6 +3,9 @@ authenticated.messagethread.list.label.title = Title
 
 authenticated.messagethread.form.label.title = Title:
 authenticated.messagethread.form.label.moment = Moment:
+authenticated.messagethread.form.label.usernames = Users:
+authenticated.messagethread.form.label.message = Messages:
 authenticated.messagethread.form.label.button.return = Return
+authenticated.messagethread.form.button.message= List of menssages
 
 
