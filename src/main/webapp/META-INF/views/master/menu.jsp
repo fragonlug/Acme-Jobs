@@ -41,6 +41,7 @@
 			<acme:menu-suboption code="master.menu.authenticated.companyrecord.list" action="/authenticated/companyrecord/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.job.list" action="/authenticated/job/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.messagethread.list" action="/authenticated/messagethread/list_mine"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">

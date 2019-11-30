@@ -23,6 +23,27 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+
+    create table `auditor` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `firm` varchar(255),
+        `resp_statement` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `auditrecord` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `moment` datetime(6),
+        `status` bit,
+        `title` varchar(255),
+        `job_id` integer not null,
+      primary key (`id`)
+    ) engine=InnoDB;
+
     create table `application` (
        `id` integer not null,
         `version` integer not null,
@@ -33,8 +54,9 @@
         `status` varchar(255),
         `job_id` integer not null,
         `worker_id` integer not null,
-        primary key (`id`)
+      primary key (`id`)
     ) engine=InnoDB;
+
 
     create table `authenticated` (
        `id` integer not null,
@@ -146,6 +168,27 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `message` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `moment` datetime(6),
+        `tags` varchar(255),
+        `title` varchar(255),
+        `message_thread_id` integer,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `messagethread` (
+       `id` integer not null,
+        `version` integer not null,
+        `message` varchar(255),
+        `moment` datetime(6),
+        `title` varchar(255),
+        `usernames` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `noncomercialbanner` (
        `id` integer not null,
         `version` integer not null,
@@ -205,6 +248,11 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `user_account_messagethread` (
+       `users_id` integer not null,
+        `messagethread_id` integer not null
+    ) engine=InnoDB;
+
     create table `worker` (
        `id` integer not null,
         `version` integer not null,
@@ -245,6 +293,18 @@
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+
+    alter table `auditor` 
+       add constraint FK_clqcq9lyspxdxcp6o4f3vkelj 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
+    alter table `auditrecord` 
+       add constraint `FKa5p4w0gnuwmtb07juvrg8ptn6` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
+
+
     alter table `application` 
        add constraint `FKoa6p4s2oyy7tf80xwc4r04vh6` 
        foreign key (`job_id`) 
@@ -254,6 +314,7 @@
        add constraint `FKmbjdoxi3o93agxosoate4sxbt` 
        foreign key (`worker_id`) 
        references `worker` (`id`);
+
 
     alter table `authenticated` 
        add constraint FK_h52w0f3wjoi68b63wv9vwon57 
@@ -275,9 +336,24 @@
        foreign key (`employer_id`) 
        references `employer` (`id`);
 
+    alter table `message` 
+       add constraint `FKhlmmbswdtxwq1f6w6gmj14oci` 
+       foreign key (`message_thread_id`) 
+       references `messagethread` (`id`);
+
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
        foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
+    alter table `user_account_messagethread` 
+       add constraint `FK6yqqctsrjddklo56unt0r4tgh` 
+       foreign key (`messagethread_id`) 
+       references `messagethread` (`id`);
+
+    alter table `user_account_messagethread` 
+       add constraint `FKh8iu87gcefeem2dlwqgdo5vkg` 
+       foreign key (`users_id`) 
        references `user_account` (`id`);
 
     alter table `worker` 

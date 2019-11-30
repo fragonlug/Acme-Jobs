@@ -322,12 +322,18 @@
 				<ref bean="employer2Authenticated"/>
 			</list>
 		</property>
+		<property name="messagethread">
+			<list>
+				<ref bean="messagethread1"/>
+			</list>
+		</property>
 	</bean>
 	
 	<bean name="employer2Employer" class="acme.entities.roles.Employer">
 			<property name="company" value="Employer 2,Inc."/>
 			<property name="sector" value="Sector 2"/>
 			<property name="userAccount" ref="employer2UserAccount"/>
+			
 	</bean>
 	
 	<bean name="employer2Authenticated" class="acme.framework.entities.Authenticated">
@@ -351,6 +357,11 @@
 			<list>
 				<ref bean="worker1Worker"/>
 				<ref bean="worker1Authenticated"/>
+			</list>
+		</property>
+		<property name="messagethread">
+			<list>
+				<ref bean="messagethread1"/>
 			</list>
 		</property>
 	</bean>
@@ -451,6 +462,7 @@
 		<property name="employer" ref="employer1Employer"/>
 	</bean>
 	
+
 	<!--  Applications -->
 	
 	
@@ -494,5 +506,62 @@
 		<property name="worker" ref="worker2Worker"/>
 		<property name="job" ref="job4"/>
 	</bean>
+    
+    	<!-- Audit records -->
+	<bean id="auditrecord1" class="acme.entities.auditrecords.Auditrecord">
+		<property name="title" value="Audit record 1"/>
+		<property name="status" value="true"/>
+		<property name="moment" value="2019/11/27 17:00"/>
+		<property name="body" value="Example of audit record"/>
+		<property name="job" ref="job1"/>
+	</bean>
+	<bean id="auditrecord2" class="acme.entities.auditrecords.Auditrecord">
+		<property name="title" value="Audit record 2"/>
+		<property name="status" value="false"/>
+		<property name="moment" value="2018/12/10 17:00"/>
+		<property name="body" value="Example of audit record"/>
+		<property name="job" ref="job1"/>
+	</bean>
+	<bean id="auditrecord3" class="acme.entities.auditrecords.Auditrecord">
+		<property name="title" value="Audit record 3"/>
+		<property name="status" value="true"/>
+		<property name="moment" value="2019/11/29 17:00"/>
+		<property name="body" value="Example of audit record"/>
+		<property name="job" ref="job2"/>
+	</bean>
+	<bean id="auditrecord4" class="acme.entities.auditrecords.Auditrecord">
+		<property name="title" value="Audit record 4"/>
+		<property name="status" value="false"/>
+		<property name="moment" value="2018/11/30 19:00"/>
+		<property name="body" value="Example of audit record"/>
+		<property name="job" ref="job3"/>
+	</bean>
+	
+	<!-- Messages & threads -->
+	<bean id="message1" class="acme.entities.messages.Message">
+		<property name="title" value="Mensaje 1"/>
+		<property name="moment" value="2019/11/27 17:00"/>
+		<property name="tags" value="#message, #work"/>
+		<property name="body" value="Este es el cuerpo del mensaje"/>
+		<property name="messageThread" ref="messagethread1"/>
+	</bean>
+	
+	<bean id="messagethread1" class="acme.entities.messagethreads.Messagethread">
+		<property name="title" value="Hilo de mensajes 1"/>
+		<property name="moment" value="2019/11/25 12:00"/>
+		<property name="usernames" value=""/>
+		<property name="message" value=""/>
+		<property name="users">
+			<list>
+				<ref bean="employer2UserAccount"/>
+				<ref bean="worker1UserAccount"/>
+			</list>
+		</property>
+		<property name="messages">
+			<list>
+				<ref bean="message1"/>
+			</list>
+			</property>
+    </bean>
 
 </beans>

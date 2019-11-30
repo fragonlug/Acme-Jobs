@@ -7,6 +7,15 @@
        drop 
        foreign key FK_6lnbc6fo3om54vugoh8icg78m;
 
+
+    alter table `auditor` 
+       drop 
+       foreign key FK_clqcq9lyspxdxcp6o4f3vkelj;
+
+    alter table `auditrecord` 
+       drop 
+       foreign key `FKa5p4w0gnuwmtb07juvrg8ptn6`;
+
     alter table `application` 
        drop 
        foreign key `FKoa6p4s2oyy7tf80xwc4r04vh6`;
@@ -14,6 +23,7 @@
     alter table `application` 
        drop 
        foreign key `FKmbjdoxi3o93agxosoate4sxbt`;
+
 
     alter table `authenticated` 
        drop 
@@ -31,9 +41,21 @@
        drop 
        foreign key `FK3rxjf8uh6fh2u990pe8i2at0e`;
 
+    alter table `message` 
+       drop 
+       foreign key `FKhlmmbswdtxwq1f6w6gmj14oci`;
+
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
+
+    alter table `user_account_messagethread` 
+       drop 
+       foreign key `FK6yqqctsrjddklo56unt0r4tgh`;
+
+    alter table `user_account_messagethread` 
+       drop 
+       foreign key `FKh8iu87gcefeem2dlwqgdo5vkg`;
 
     alter table `worker` 
        drop 
@@ -45,7 +67,13 @@
 
     drop table if exists `anonymous`;
 
+
+    drop table if exists `auditor`;
+
+    drop table if exists `auditrecord`;
+
     drop table if exists `application`;
+
 
     drop table if exists `authenticated`;
 
@@ -67,6 +95,10 @@
 
     drop table if exists `job`;
 
+    drop table if exists `message`;
+
+    drop table if exists `messagethread`;
+
     drop table if exists `noncomercialbanner`;
 
     drop table if exists `offers`;
@@ -76,6 +108,8 @@
     drop table if exists `request`;
 
     drop table if exists `user_account`;
+
+    drop table if exists `user_account_messagethread`;
 
     drop table if exists `worker`;
 

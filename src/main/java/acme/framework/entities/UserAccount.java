@@ -18,6 +18,7 @@ import java.util.Iterator;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 import javax.validation.Valid;
@@ -27,6 +28,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 
 import acme.datatypes.UserIdentity;
+import acme.entities.messagethreads.Messagethread;
 import acme.framework.helpers.PasswordHelper;
 import acme.framework.helpers.StringHelper;
 import lombok.Getter;
@@ -89,7 +91,11 @@ public class UserAccount extends DomainEntity {
 	@NotNull
 	@Valid
 	@OneToMany(mappedBy = "userAccount")
-	private Collection<UserRole> roles;
+	private Collection<UserRole>		roles;
+
+	@Valid
+	@ManyToMany()
+	private Collection<Messagethread>	messagethread;
 
 
 	@Transient
