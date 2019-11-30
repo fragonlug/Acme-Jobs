@@ -367,8 +367,8 @@
 	</bean>
 	
 	<bean name="worker1Worker" class="acme.entities.roles.Worker">
-			<property name="qualificationRecord" value="5.0"/>
-			<property name="skillRecord" value="5.0"/>
+			<property name="qualificationRecord" value="qualification record 1"/>
+			<property name="skillRecord" value="skill record 1"/>
 			<property name="userAccount" ref="worker1UserAccount"/>
 	</bean>
 	
@@ -397,8 +397,8 @@
 	</bean>
 	
 	<bean name="worker2Worker" class="acme.entities.roles.Worker">
-			<property name="qualificationRecord" value="5.0"/>
-			<property name="skillRecord" value="5.0"/>
+			<property name="qualificationRecord" value="qualification record 2"/>
+			<property name="skillRecord" value="skill record 2"/>
 			<property name="userAccount" ref="worker2UserAccount"/>
 	</bean>
 	
@@ -462,7 +462,52 @@
 		<property name="employer" ref="employer1Employer"/>
 	</bean>
 	
-		<!-- Audit records -->
+
+	<!--  Applications -->
+	
+	
+	
+	<bean id="application1" class="acme.entities.application.Application">
+		<property name="reference" value="EMP1-JOB1:AAAA"/>
+		<property name="moment" value="2019/12/11 23:59"/>
+		<property name="status" value="pending"/>
+		<property name="skills" value="very good in Python"/>
+		<property name="qualifications" value="2 years working in Spotify"/>
+		<property name="worker" ref="worker1Worker"/>
+		<property name="job" ref="job1"/>
+	</bean>
+	
+	<bean id="application2" class="acme.entities.application.Application">
+		<property name="reference" value="EMP2-JOB1:AAAA"/>
+		<property name="moment" value="2017/12/11 23:59"/>
+		<property name="status" value="rejected"/>
+		<property name="skills" value="good marks in the career"/>
+		<property name="qualifications" value="nothing"/>
+		<property name="worker" ref="worker1Worker"/>
+		<property name="job" ref="job2"/>
+	</bean>
+	
+	<bean id="application3" class="acme.entities.application.Application">
+		<property name="reference" value="EMP1-JOB2:AAAB"/>
+		<property name="moment" value="2019/07/11 12:12"/>
+		<property name="status" value="accepted"/>
+		<property name="skills" value="very good in neural networks"/>
+		<property name="qualifications" value="master in intelligent systems"/>
+		<property name="worker" ref="worker2Worker"/>
+		<property name="job" ref="job3"/>
+	</bean>
+	
+	<bean id="application4" class="acme.entities.application.Application">
+		<property name="reference" value="EMP2-JOB2:AAAB"/>
+		<property name="moment" value="2019/06/11 13:59"/>
+		<property name="status" value="rejected"/>
+		<property name="skills" value="very good in neural networks"/>
+		<property name="qualifications" value="master in intelligent systems"/>
+		<property name="worker" ref="worker2Worker"/>
+		<property name="job" ref="job4"/>
+	</bean>
+    
+    	<!-- Audit records -->
 	<bean id="auditrecord1" class="acme.entities.auditrecords.Auditrecord">
 		<property name="title" value="Audit record 1"/>
 		<property name="status" value="true"/>
@@ -517,6 +562,6 @@
 				<ref bean="message1"/>
 			</list>
 			</property>
-	</bean>
+    </bean>
 
 </beans>

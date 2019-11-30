@@ -3,6 +3,7 @@ package acme.features.administrator.dashboard;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,7 +47,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert model != null;
 
 		request.unbind(entity, model, "totalAnnouncement", "totalInvestorsRecord", "totalCompanyRecords", "minRewardRequest", "maxRewardRequest", "minRewardOffers", "maxRewardOffers", "companysBySector", "sectorsOfCompanys", "inverstorsBySector",
-			"sectorsOfInverstors", "mediaRequest", "mediaOffer", "stdevRequest", "stdevOffer");
+			"sectorsOfInverstors", "mediaRequest", "mediaOffer", "stdevRequest", "stdevOffer", "jobsByFinalMode", "statusOfApplication", "applicationByStatus");
 
 	}
 
@@ -68,6 +69,9 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setMediaOffer(this.getMediaOffer());
 		result.setStdevOffer(this.getStdevOffer());
 		result.setStdevRequest(this.getStdevRequest());
+		result.setJobsByFinalMode(this.getJobsByFinalMode());
+		result.setApplicationByStatus(this.getApplicationByStatus());
+		result.setStatusOfApplication(this.getStatusOfApplication());
 		return result;
 	}
 
@@ -158,6 +162,26 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			ac = ac + d;
 		}
 		Double res = Math.sqrt(ac - offers.size() - 1);
+		return res;
+
+	}
+
+	public List<Double> getJobsByFinalMode() {
+		List<Integer> result = this.repository.getJobsByFinalMode();
+		Double size = result.stream().mapToDouble(x -> x).sum();
+		List<Double> res = result.stream().map(x -> x.doubleValue() / size).collect(Collectors.toList());
+		return res;
+	}
+
+	public List<String> getStatusOfApplication() {
+		List<String> res = this.repository.getStatusOfApplication();
+		return res;
+	}
+
+	public List<Double> getApplicationByStatus() {
+		List<Integer> result = this.repository.getApplicationBystatus();
+		Double size = result.stream().mapToDouble(x -> x).sum();
+		List<Double> res = result.stream().map(x -> x.longValue() / size).collect(Collectors.toList());
 		return res;
 
 	}

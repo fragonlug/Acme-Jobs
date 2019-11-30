@@ -50,4 +50,12 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select avg((a.majorRange.amount + a.lowerRange.amount)/2) from Offers a")
 	Double getMediaOffer();
 
+	@Query("select count(*) as job from Job group by finalMode")
+	List<Integer> getJobsByFinalMode();
+
+	@Query("select status as Application from Application group by status")
+	List<String> getStatusOfApplication();
+
+	@Query("select count(*) as Application from Application group by status")
+	List<Integer> getApplicationBystatus();
 }

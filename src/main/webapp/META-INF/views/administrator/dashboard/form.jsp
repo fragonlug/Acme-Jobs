@@ -18,7 +18,7 @@
 	
 </acme:form>
 
-<!--  -->	
+				<!--	Chart of companies  -->	
 
 	<h2><acme:message code="administrator.dashboard.form.title.chartCompanys"/></h2>
 	<div><canvas id="canvas"></canvas></div>
@@ -71,9 +71,10 @@
 		options	:	options
 	});
 });
-	
-	
 	</script>
+	
+	<!--	Chart of Inverstors  -->	
+	
 	<h2><acme:message code="administrator.dashboard.form.title.chartInverstors"/></h2>
 	<div><canvas id="canvas2"></canvas></div>
 	<script type="text/javascript">
@@ -128,6 +129,118 @@
 	
 	
 	</script>
+	
+	<!--	Chart of Jobs  -->	
+	
+	<h2><acme:message code="administrator.dashboard.form.title.chartJobs"/></h2>
+	<div><canvas id="canvas3"></canvas></div>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var data = {
+				labels	:	["open","closed"],
+				datasets	:	[ 
+					{
+						data : [
+							<jstl:forEach var="item" items="${jobsByFinalMode}">
+							"${item}",
+							</jstl:forEach>
+							
+						]
+					
+				}
+					]
+		
+		
+	};
+	
+	var options =	{
+			scales	:	{
+				yAxes	:	[
+					{
+						ticks	:	{
+							suggestedMin	:	0.0,
+							suggestedMax	:	1.0
+						}
+					}
+				]
+			},
+			legend	:	{
+				display : false
+			}
+	};
+	
+	var canvas, context;
+	
+	canvas = document.getElementById("canvas3");
+	context = canvas.getContext("2d");
+	new Chart(context, {
+		type	:	"bar",
+		data	:	data,
+		options	:	options
+	});
+});
+	</script>
+	
+	
+
+				<!--	Chart of Applications  -->	
+
+	<h2><acme:message code="administrator.dashboard.form.title.chartApplications"/></h2>
+	<div><canvas id="canvas4"></canvas></div>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var data = {
+				labels	:	[
+					<jstl:forEach var="item" items="${statusOfApplication}">
+					"${item}",
+					</jstl:forEach>
+				],
+				datasets	:	[ 
+					{
+						data : [
+							<jstl:forEach var="item" items="${applicationByStatus}">
+							"${item}",
+							</jstl:forEach>
+							
+						]
+					
+				}
+					]
+		
+		
+	};
+	
+	var options =	{
+			scales	:	{
+				yAxes	:	[
+					{
+						ticks	:	{
+							suggestedMin	:	0.0,
+							suggestedMax	:	1.0
+						}
+					}
+				]
+			},
+			legend	:	{
+				display : false
+			}
+	};
+	
+	var canvas, context;
+	
+	canvas = document.getElementById("canvas4");
+	context = canvas.getContext("2d");
+	new Chart(context, {
+		type	:	"bar",
+		data	:	data,
+		options	:	options
+	});
+});
+	</script>
+	
+	
+	
+	
 	
 	<acme:form-return code="administrator.configuration.form.label.button.return"/>
 </acme:form>
