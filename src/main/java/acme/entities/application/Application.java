@@ -11,6 +11,7 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 import acme.entities.jobs.Job;
 import acme.entities.roles.Worker;
@@ -31,6 +32,7 @@ public class Application extends DomainEntity {
 
 	@Column(unique = true)
 	@NotBlank
+	@Pattern(regexp = "^[a-zA-Z]{4}[-][a-zA-Z]{4}[:][a-zA-Z]{4}$")
 	private String				reference;
 
 	@NotNull
@@ -38,10 +40,14 @@ public class Application extends DomainEntity {
 	private Date				moment;
 
 	@NotBlank
+	@Pattern(regexp = "^(pending)|(accepted)|(rejected)$")
 	private String				status;
 
 	@NotBlank
 	private String				skills;
+
+	@NotBlank
+	private String				statement;
 
 	@NotBlank
 	private String				qualifications;

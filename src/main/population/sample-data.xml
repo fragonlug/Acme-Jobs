@@ -396,56 +396,73 @@
 	</bean>
 	
 	<!-- Jobs -->
+		<!-- Descriptors and duties -->
+		
+		<bean id="duty1" class="acme.entities.duties.Duty">
+			<property name="title" value="Duty 1"/>
+			<property name="description" value="Duty description"/>
+			<property name="percentage" value="15.0"/>
+		</bean>
+		
+		<bean id="descriptor1" class="acme.entities.descriptor.Descriptor">
+			<property name="description" value="Descriptor description"/>
+			<property name="duties">
+				<list>
+					<ref bean="duty1"/>
+				</list>
+			</property>
+		</bean>
+		
 	<bean id="job1" class="acme.entities.jobs.Job">
-		<property name="reference" value="EMP1-JOB1"/>
+		<property name="reference" value="EMPA-JOBA"/>
 		<property name="title" value="Title 1"/>
 		<property name="deadline" value="2030/12/11 23:59"/>
 		<property name="salary" value="€ 15,000.00"/>
-		<property name="description" value="Lorem ipsum sit dolor amet"/>
+		<property name="descriptor" ref="descriptor1"/>
 		<property name="moreInfo" value="https://www.example.es/"/>
 		<property name="finalMode" value="false"/>
 		<property name="employer" ref="employer1Employer"/>
 	</bean>
 	
 	<bean id="job2" class="acme.entities.jobs.Job">
-		<property name="reference" value="EMP2-JOB1"/>
+		<property name="reference" value="EMPB-JOBA"/>
 		<property name="title" value="Title 2"/>
 		<property name="deadline" value="2025/12/11 23:59"/>
 		<property name="salary" value="€ 2,000.10"/>
-		<property name="description" value="Lorem ipsum sit dolor amet"/>
+		<property name="descriptor" ref="descriptor1"/>
 		<property name="moreInfo" value="https://www.example.es/"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer2Employer"/>
 	</bean>
 	
 	<bean id="job3" class="acme.entities.jobs.Job">
-		<property name="reference" value="EMP1-JOB2"/>
+		<property name="reference" value="EMPA-JOBB"/>
 		<property name="title" value="Title 3"/>
 		<property name="deadline" value="2024/11/01 23:59"/>
 		<property name="salary" value="€ 15,000.00"/>
-		<property name="description" value="Lorem ipsum sit dolor amet"/>
+		<property name="descriptor" ref="descriptor1"/>
 		<property name="moreInfo" value="https://www.example.es/"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer1Employer"/>
 	</bean>
 	
 	<bean id="job4" class="acme.entities.jobs.Job">
-		<property name="reference" value="EMP2-JOB2"/>
+		<property name="reference" value="EMPB-JOBB"/>
 		<property name="title" value="Title 4"/>
 		<property name="deadline" value="2029/12/11 12:59"/>
 		<property name="salary" value="€ 900,000.00"/>
-		<property name="description" value="Lorem ipsum sit dolor amet"/>
+		<property name="descriptor" ref="descriptor1"/>
 		<property name="moreInfo" value="https://www.example.es/"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer2Employer"/>
 	</bean>
 	
 	<bean id="job5" class="acme.entities.jobs.Job">
-		<property name="reference" value="EMP1-JOB3"/>
+		<property name="reference" value="EMPA-JOBC"/>
 		<property name="title" value="Title 5"/>
 		<property name="deadline" value="2015/12/11 23:59"/>
 		<property name="salary" value="€ 100.00"/>
-		<property name="description" value="Lorem ipsum sit dolor amet"/>
+		<property name="descriptor" ref="descriptor1"/>
 		<property name="moreInfo" value="https://www.example.es/"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer1Employer"/>
@@ -456,9 +473,10 @@
 	
 	
 	<bean id="application1" class="acme.entities.application.Application">
-		<property name="reference" value="EMP1-JOB1:AAAA"/>
+		<property name="reference" value="EMPA-JOBA:AAAA"/>
 		<property name="moment" value="2019/12/11 23:59"/>
 		<property name="status" value="pending"/>
+		<property name="statement" value="A statement"/>
 		<property name="skills" value="very good in Python"/>
 		<property name="qualifications" value="2 years working in Spotify"/>
 		<property name="worker" ref="worker1Worker"/>
@@ -466,9 +484,10 @@
 	</bean>
 	
 	<bean id="application2" class="acme.entities.application.Application">
-		<property name="reference" value="EMP2-JOB1:AAAA"/>
+		<property name="reference" value="EMPB-JOBA:AAAA"/>
 		<property name="moment" value="2017/12/11 23:59"/>
 		<property name="status" value="rejected"/>
+		<property name="statement" value="A statement"/>
 		<property name="skills" value="good marks in the career"/>
 		<property name="qualifications" value="nothing"/>
 		<property name="worker" ref="worker1Worker"/>
@@ -476,9 +495,10 @@
 	</bean>
 	
 	<bean id="application3" class="acme.entities.application.Application">
-		<property name="reference" value="EMP1-JOB2:AAAB"/>
+		<property name="reference" value="EMPA-JOBB:AAAB"/>
 		<property name="moment" value="2019/07/11 12:12"/>
 		<property name="status" value="accepted"/>
+		<property name="statement" value="A statement"/>
 		<property name="skills" value="very good in neural networks"/>
 		<property name="qualifications" value="master in intelligent systems"/>
 		<property name="worker" ref="worker2Worker"/>
@@ -486,9 +506,10 @@
 	</bean>
 	
 	<bean id="application4" class="acme.entities.application.Application">
-		<property name="reference" value="EMP2-JOB2:AAAB"/>
+		<property name="reference" value="EMPB-JOBB:AAAB"/>
 		<property name="moment" value="2019/06/11 13:59"/>
 		<property name="status" value="rejected"/>
+		<property name="statement" value="A statement"/>
 		<property name="skills" value="very good in neural networks"/>
 		<property name="qualifications" value="master in intelligent systems"/>
 		<property name="worker" ref="worker2Worker"/>
