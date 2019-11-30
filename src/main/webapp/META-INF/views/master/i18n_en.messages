@@ -79,6 +79,13 @@ master.menu.provider.favourite-link = Favourite link
 master.menu.provider.requestList = Request list
 master.menu.provider.requestCreate = Create a request
 
+# master.menu.auditor ########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.list = List of his/her jobs
+master.menu.notauditor.list = List of not his/her jobs
+
+
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumer

@@ -405,6 +405,66 @@
 	<bean name="worker2Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="worker2UserAccount" />
 	</bean>
+	<!-- Audit -->
+	
+	<bean id="Audit1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="audit1"/>
+		<property name="password" value="audit1"/>
+		<property name="enabled" value="true"/>
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+			<property name="name" value="Audit"/>
+			<property name="surname" value="One"/>
+			<property name="email" value="audit1@acme.com"/>
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="audit1Audit"/>
+				<ref bean="audit1Authenticated"/>
+			</list>
+		</property>
+	</bean>
+	<bean name="audit1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="Audit1UserAccount" />
+	</bean>
+	
+	
+	<bean name="audit1Audit" class="acme.entities.roles.Auditor">
+			<property name="firm" value="Example Company1"/>
+			<property name="respStatement" value="Example of responsibility statement"/>
+			<property name="userAccount" ref="Audit1UserAccount"/>
+	</bean>
+	
+		<bean id="Audit2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="audit2"/>
+		<property name="password" value="audit2"/>
+		<property name="enabled" value="true"/>
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+			<property name="name" value="Audit"/>
+			<property name="surname" value="Two"/>
+			<property name="email" value="audit2@acme.com"/>
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="audit2Audit"/>
+				<ref bean="audit2Authenticated"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="audit2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="Audit2UserAccount" />
+	</bean>
+	
+	<bean name="audit2Audit" class="acme.entities.roles.Auditor">
+			<property name="firm" value="Example Company2"/>
+			<property name="respStatement" value="Example of responsibility statement"/>
+			<property name="userAccount" ref="Audit2UserAccount"/>
+	</bean>
+	
 	
 	<!-- Jobs -->
 	<bean id="job1" class="acme.entities.jobs.Job">
@@ -416,6 +476,7 @@
 		<property name="moreInfo" value="https://www.example.es/"/>
 		<property name="finalMode" value="false"/>
 		<property name="employer" ref="employer1Employer"/>
+		<property name="auditor" ref="audit1Audit"/>
 	</bean>
 	
 	<bean id="job2" class="acme.entities.jobs.Job">
@@ -427,6 +488,7 @@
 		<property name="moreInfo" value="https://www.example.es/"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer2Employer"/>
+		<property name="auditor" ref="audit1Audit"/>
 	</bean>
 	
 	<bean id="job3" class="acme.entities.jobs.Job">
@@ -438,6 +500,7 @@
 		<property name="moreInfo" value="https://www.example.es/"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer1Employer"/>
+		<property name="auditor" ref="audit1Audit"/>
 	</bean>
 	
 	<bean id="job4" class="acme.entities.jobs.Job">
@@ -449,6 +512,7 @@
 		<property name="moreInfo" value="https://www.example.es/"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer2Employer"/>
+		<property name="auditor" ref="audit2Audit"/>
 	</bean>
 	
 	<bean id="job5" class="acme.entities.jobs.Job">
@@ -460,6 +524,7 @@
 		<property name="moreInfo" value="https://www.example.es/"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer1Employer"/>
+		<property name="auditor" ref="audit2Audit"/>
 	</bean>
 	
 
@@ -520,7 +585,7 @@
 		<property name="status" value="false"/>
 		<property name="moment" value="2018/12/10 17:00"/>
 		<property name="body" value="Example of audit record"/>
-		<property name="job" ref="job1"/>
+		<property name="job" ref="job4"/>
 	</bean>
 	<bean id="auditrecord3" class="acme.entities.auditrecords.Auditrecord">
 		<property name="title" value="Audit record 3"/>
