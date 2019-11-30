@@ -80,6 +80,13 @@ master.menu.provider.requestCreate = Crear una petición
 master.menu.consumer.OfferList = Lista de ofertas
 master.menu.consumer.OfferCreate = Crear una oferta
 
+# master.menu.auditor ########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.list = Lista de sus trabajos
+master.menu.notauditor.list = Lista de los que no son sus trabajos
+
+
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor
