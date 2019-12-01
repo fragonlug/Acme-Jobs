@@ -1,7 +1,6 @@
 
 package acme.entities.jobs;
 
-import java.beans.Transient;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -10,6 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -64,8 +64,8 @@ public class Job extends DomainEntity {
 
 
 	@Transient
-	private String getDescriptor() {
-		return this.descriptor.toString();
+	public String getDescriptorDescription() {
+		return this.descriptor.getDescription();
 	}
 
 
