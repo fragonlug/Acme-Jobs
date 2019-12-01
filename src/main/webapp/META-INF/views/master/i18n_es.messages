@@ -71,6 +71,12 @@ master.menu.administrator.challenge.create = Crear un reto
 master.menu.administrator.companyrecord.list = Lista de registros de compañías
 master.menu.administrator.companyrecord.create = Crear registro de compañia
 
+# master.menu.sponsor ###################################################
+
+master.menu.sponsor = Patrocinador
+master.menu.sponsor.comercialbanner.list = Lista de anuncios comerciales
+master.menu.sponsor.noncomercialbanner.list = Lista de anuncios no comerciales
+
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor

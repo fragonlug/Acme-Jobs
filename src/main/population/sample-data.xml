@@ -243,12 +243,75 @@
 		<property name="rewardBronze" value="625€"/>
 	</bean>
 	
+	
+	
+		<!-- Sponsors -->
+	
+	<bean id="sponsor1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor1"/>
+		<property name="password" value="sponsor1"/>
+		<property name="enabled" value="true"/>
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+			<property name="name" value="Sponsor"/>
+			<property name="surname" value="One"/>
+			<property name="email" value="sponsor1@acme.com"/>
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="sponsor1Sponsor"/>
+				<ref bean="sponsor1Authenticated"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="sponsor1Sponsor" class="acme.entities.roles.Sponsor">
+			<property name="orgName" value="Sponsor 1,Inc."/>
+			<property name="creditCard" value="4716826134105316"/>
+			<property name="userAccount" ref="sponsor1UserAccount"/>
+	</bean>
+	
+	<bean name="sponsor1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsor1UserAccount" />
+	</bean>
+	
+	
+	<bean id="sponsor2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor2"/>
+		<property name="password" value="sponsor2"/>
+		<property name="enabled" value="true"/>
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+			<property name="name" value="Sponsor"/>
+			<property name="surname" value="Two"/>
+			<property name="email" value="sponsor2@acme.com"/>
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="sponsor2Sponsor"/>
+				<ref bean="sponsor2Authenticated"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="sponsor2Sponsor" class="acme.entities.roles.Sponsor">
+			<property name="orgName" value="Sponsor 2,Inc."/>
+			<property name="userAccount" ref="sponsor2UserAccount"/>
+	</bean>
+	
+	<bean name="sponsor2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsor2UserAccount" />
+	</bean>
+	
 	<!--Non Comercial Banner  -->
 	<bean id="nonComercialBanner01" class="acme.entities.noncomercialbanner.Noncomercialbanner">
 		<property name="urlPicture" value="https://static1.seekingalpha.com/images/marketing_images/numbers_words_signs/words_phrases/jobs_gear.jpeg"/>
 		<property name="slogan" value="get your job today!"/>
 		<property name="urlTarget" value="https://es.wikipedia.org/wiki/Trabajo_(economía)"/>
 		<property name="jingle"><null/></property>
+		<property name="sponsor" ref="sponsor1Sponsor"/>
 	</bean>
 	
 	<bean id="nonComercialBanner02" class="acme.entities.noncomercialbanner.Noncomercialbanner">
@@ -256,6 +319,7 @@
 		<property name="slogan" value="visit the faculty's web!"/>
 		<property name="urlTarget" value="https://www.informatica.us.es/"/>
 		<property name="jingle" value="https://www.youtube.com/watch?v=3PgNPc-iFW8"/>
+		<property name="sponsor" ref="sponsor2Sponsor"/>
 	</bean>
 	
 	<!-- Comercial Banner -->
@@ -264,6 +328,7 @@
 		<property name="slogan" value="buy our's product!"/>
 		<property name="urlTarget" value="http://www.almaromerita.es/"/>
 		<property name="creditCard" value="4716826134105316"/>
+		<property name="sponsor" ref="sponsor1Sponsor"/>
 	</bean>
 	
 	<bean id="comercialBanner02" class="acme.entities.comercialbanner.Comercialbanner">
@@ -271,7 +336,9 @@
 		<property name="slogan" value="best sweets of the world!"/>
 		<property name="urlTarget" value="http://dulcesgarpe.com/tienda/"/>
 		<property name="creditCard" value="5525482640963406"/>
+		<property name="sponsor" ref="sponsor1Sponsor"/>
 	</bean>
+	
 	
 	<!-- Employers -->
 	
