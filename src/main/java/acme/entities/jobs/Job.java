@@ -1,6 +1,7 @@
 
 package acme.entities.jobs;
 
+import java.beans.Transient;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -61,18 +62,18 @@ public class Job extends DomainEntity {
 
 	private boolean				finalMode;
 
-	/*
-	 * @Transient
-	 * private String getDescriptor() {
-	 * return this.descriptor.toString();
-	 * }
-	 */
+
+	@Transient
+	private String getDescriptor() {
+		return this.descriptor.toString();
+	}
+
 
 	//	Relationships -------------------------------------------------------------------------
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Employer			employer;
+	private Employer employer;
 
 }

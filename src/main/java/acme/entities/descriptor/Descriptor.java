@@ -1,6 +1,7 @@
 
 package acme.entities.descriptor;
 
+import java.beans.Transient;
 import java.util.Collection;
 
 import javax.persistence.Entity;
@@ -27,4 +28,9 @@ public class Descriptor extends DomainEntity {
 	@OneToMany
 	private Collection<Duty>	duties;
 
+
+	@Transient
+	private String getDuties() {
+		return this.duties.toString();
+	}
 }

@@ -10,6 +10,7 @@
 	<acme:form-money code="employer.job.form.label.salary" path="salary"/>
 	<acme:form-money code="employer.job.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-textbox code="employer.job.form.label.descriptor" path="descriptor"/>
+	<acme:form-textbox code="employer.job.form.label.duties" path="duties"/>
 
 	<acme:form-return code="employer.job.form.label.button.return"/>
 </acme:form>
