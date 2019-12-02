@@ -9,6 +9,7 @@ auditor.job.form.label.deadline = Dead-Line:
 auditor.job.form.label.salary = Salary:
 auditor.job.form.label.moreInfo = More info:
 auditor.job.form.label.description = Description:
+auditor.auditrecord.form.label.listAuditrecord = List of audit records
 auditor.job.form.label.button.return = Return
 
 
