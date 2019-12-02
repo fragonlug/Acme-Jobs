@@ -65,7 +65,12 @@
 
 			
 		</acme:menu-option>
-
+		
+		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')">	
+			<acme:menu-suboption code="master.menu.sponsor.comercialbanner.list" action="/sponsor/comercialbanner/list" />
+			<acme:menu-suboption code="master.menu.sponsor.noncomercialbanner.list" action="/sponsor/noncomercialbanner/list" />
+	    </acme:menu-option>
+	
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-separator/>

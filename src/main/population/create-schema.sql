@@ -97,6 +97,7 @@
         `url_picture` varchar(255),
         `url_target` varchar(255),
         `credit_card` varchar(255),
+        `sponsor_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -195,6 +196,7 @@
         `url_picture` varchar(255),
         `url_target` varchar(255),
         `jingle` varchar(255),
+        `sponsor_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -232,6 +234,15 @@
         `reward_currency` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `sponsor` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `credit_card` varchar(255),
+        `org_name` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -320,6 +331,11 @@
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `comercialbanner` 
+       add constraint `FKii9iupedxt6hx534i7mm6wjhv` 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
+
     alter table `consumer` 
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
@@ -345,8 +361,18 @@
        foreign key (`message_thread_id`) 
        references `messagethread` (`id`);
 
+    alter table `noncomercialbanner` 
+       add constraint `FKiqlwh7t99w47gee8as9xvk5xt` 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
+
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
+    alter table `sponsor` 
+       add constraint FK_20xk0ev32hlg96kqynl6laie2 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
