@@ -4,6 +4,8 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
+	<acme:form-textarea code="employer.duty.form.label.Jobtitle" path="title"/>
+	
 	<acme:form-textarea code="employer.duty.form.label.title" path="title"/>
 	<acme:form-textbox code="employer.duty.form.label.percentage" path="percentage"/>
 	<acme:form-textarea code="employer.duty.form.label.description" path="description"/>

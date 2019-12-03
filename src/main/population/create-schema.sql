@@ -138,6 +138,7 @@
        `id` integer not null,
         `version` integer not null,
         `description` varchar(255),
+        `job_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -186,7 +187,6 @@
         `salary_currency` varchar(255),
         `title` varchar(255),
         `auditor_id` integer not null,
-        `descriptor_id` integer,
         `employer_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -367,6 +367,11 @@
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `descriptor` 
+       add constraint `FKgfulfilmwi4hhaquiu7fr5g0g` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
+
     alter table `descriptor_duty` 
        add constraint `FK57eqqlhihwvd53ykpmsiqlx2p` 
        foreign key (`duties_id`) 
@@ -391,11 +396,6 @@
        add constraint `FK15emyu82ye1j9lfl1wpo1i1ee` 
        foreign key (`auditor_id`) 
        references `auditor` (`id`);
-
-    alter table `job` 
-       add constraint `FKfqwyynnbcsq0htxho3vchpd2u` 
-       foreign key (`descriptor_id`) 
-       references `descriptor` (`id`);
 
     alter table `job` 
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 

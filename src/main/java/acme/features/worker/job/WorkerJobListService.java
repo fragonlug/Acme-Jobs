@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.job;
+package acme.features.worker.job;
 
 import java.util.Calendar;
 import java.util.Collection;
@@ -9,16 +9,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.jobs.Job;
+import acme.entities.roles.Worker;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedJobListService implements AbstractListService<Authenticated, Job> {
+public class WorkerJobListService implements AbstractListService<Worker, Job> {
 
 	@Autowired
-	AuthenticatedJobRepository repository;
+	WorkerJobRepository repository;
 
 
 	@Override

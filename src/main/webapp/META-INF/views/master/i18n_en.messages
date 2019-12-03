@@ -111,6 +111,7 @@ master.menu.employer.applicationList = List of applications to my jobs
 
 master.menu.worker = Worker
 master.menu.worker.applicationList = List of my applications
+master.menu.worker.job.list = List of active jobs
 
 # master.menu.user-account ####################################################
 
