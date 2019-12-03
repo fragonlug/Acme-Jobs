@@ -1,0 +1,14 @@
+notauditor.job.list.label.reference = Reference
+notauditor.job.list.label.deadline = Dead-Line
+notauditor.job.list.label.title = Title
+
+
+notauditor.job.form.label.reference = Reference:
+notauditor.job.form.label.title = Title:
+notnotauditor.job.form.label.deadline = Dead-Line:
+notnotauditor.job.form.label.salary = Salary:
+notnotauditor.job.form.label.moreInfo = More info:
+notnotauditor.job.form.label.description = Description:
+notnotauditor.job.form.label.button.return = Return
+
+

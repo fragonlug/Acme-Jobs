@@ -1,0 +1,14 @@
+notauditor.job.list.label.reference = Referencia
+notauditor.job.list.label.deadline = Fecha límite
+notauditor.job.list.label.title = Título
+
+
+notauditor.job.form.label.reference = Referencia:
+notauditor.job.form.label.title = Título:
+employer.job.form.label.deadline = Fecha límite:
+notauditor.job.form.label.salary = Salario:
+notauditor.job.form.label.moreInfo = Más información:
+notauditor.job.form.label.description = Descripción:
+notauditor.job.form.label.button.return = Volver
+
+

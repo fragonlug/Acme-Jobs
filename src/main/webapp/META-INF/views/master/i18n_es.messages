@@ -48,6 +48,7 @@ master.menu.authenticated.offer.list = Lista de ofertas
 master.menu.authenticated.challenge.list = Lista de retos
 master.menu.authenticated.companyrecord.list= Lista de registros de compañías
 master.menu.authenticated.job.list = Lista de ofertas de trabajo activas
+master.menu.authenticated.messagethread.list = Lista de hilos de mensajes
 
 # master.menu.administrator ###################################################
 
@@ -70,6 +71,12 @@ master.menu.administrator.challenge.create = Crear un reto
 master.menu.administrator.companyrecord.list = Lista de registros de compañías
 master.menu.administrator.companyrecord.create = Crear registro de compañia
 
+# master.menu.sponsor ###################################################
+
+master.menu.sponsor = Patrocinador
+master.menu.sponsor.comercialbanner.list = Lista de anuncios comerciales
+master.menu.sponsor.noncomercialbanner.list = Lista de anuncios no comerciales
+
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
@@ -78,6 +85,13 @@ master.menu.provider.requestList = Lista de peticiones
 master.menu.provider.requestCreate = Crear una petición
 master.menu.consumer.OfferList = Lista de ofertas
 master.menu.consumer.OfferCreate = Crear una oferta
+
+# master.menu.auditor ########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.list = Lista de sus trabajos
+master.menu.notauditor.list = Lista de los que no son sus trabajos
+
 
 # master.menu.consumer ##########################################################
 

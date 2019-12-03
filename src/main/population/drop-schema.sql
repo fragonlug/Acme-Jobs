@@ -15,9 +15,21 @@
        drop 
        foreign key `FKmbjdoxi3o93agxosoate4sxbt`;
 
+    alter table `auditor` 
+       drop 
+       foreign key FK_clqcq9lyspxdxcp6o4f3vkelj;
+
+    alter table `auditrecord` 
+       drop 
+       foreign key `FKa5p4w0gnuwmtb07juvrg8ptn6`;
+
     alter table `authenticated` 
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;
+
+    alter table `comercialbanner` 
+       drop 
+       foreign key `FKii9iupedxt6hx534i7mm6wjhv`;
 
     alter table `consumer` 
        drop 
@@ -43,13 +55,34 @@
        drop 
        foreign key `FKfqwyynnbcsq0htxho3vchpd2u`;
 
+
     alter table `job` 
        drop 
        foreign key `FK3rxjf8uh6fh2u990pe8i2at0e`;
 
+    alter table `message` 
+       drop 
+       foreign key `FKhlmmbswdtxwq1f6w6gmj14oci`;
+
+    alter table `noncomercialbanner` 
+       drop 
+       foreign key `FKiqlwh7t99w47gee8as9xvk5xt`;
+
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
+
+    alter table `sponsor` 
+       drop 
+       foreign key FK_20xk0ev32hlg96kqynl6laie2;
+
+    alter table `user_account_messagethread` 
+       drop 
+       foreign key `FK6yqqctsrjddklo56unt0r4tgh`;
+
+    alter table `user_account_messagethread` 
+       drop 
+       foreign key `FKh8iu87gcefeem2dlwqgdo5vkg`;
 
     alter table `worker` 
        drop 
@@ -62,6 +95,10 @@
     drop table if exists `anonymous`;
 
     drop table if exists `application`;
+
+    drop table if exists `auditor`;
+
+    drop table if exists `auditrecord`;
 
     drop table if exists `authenticated`;
 
@@ -89,6 +126,10 @@
 
     drop table if exists `job`;
 
+    drop table if exists `message`;
+
+    drop table if exists `messagethread`;
+
     drop table if exists `noncomercialbanner`;
 
     drop table if exists `offers`;
@@ -97,7 +138,11 @@
 
     drop table if exists `request`;
 
+    drop table if exists `sponsor`;
+
     drop table if exists `user_account`;
+
+    drop table if exists `user_account_messagethread`;
 
     drop table if exists `worker`;
 

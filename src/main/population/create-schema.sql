@@ -37,6 +37,26 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `auditor` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `firm` varchar(255),
+        `resp_statement` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `auditrecord` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `moment` datetime(6),
+        `status` bit,
+        `title` varchar(255),
+        `job_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `authenticated` (
        `id` integer not null,
         `version` integer not null,
@@ -78,6 +98,7 @@
         `url_picture` varchar(255),
         `url_target` varchar(255),
         `credit_card` varchar(255),
+        `sponsor_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -165,7 +186,29 @@
         `salary_currency` varchar(255),
         `title` varchar(255),
         `descriptor_id` integer,
+        `auditor_id` integer not null,
         `employer_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `message` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `moment` datetime(6),
+        `tags` varchar(255),
+        `title` varchar(255),
+        `message_thread_id` integer,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `messagethread` (
+       `id` integer not null,
+        `version` integer not null,
+        `message` varchar(255),
+        `moment` datetime(6),
+        `title` varchar(255),
+        `usernames` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -176,6 +219,7 @@
         `url_picture` varchar(255),
         `url_target` varchar(255),
         `jingle` varchar(255),
+        `sponsor_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -216,6 +260,15 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `sponsor` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `credit_card` varchar(255),
+        `org_name` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `user_account` (
        `id` integer not null,
         `version` integer not null,
@@ -226,6 +279,11 @@
         `password` varchar(255),
         `username` varchar(255),
         primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `user_account_messagethread` (
+       `users_id` integer not null,
+        `messagethread_id` integer not null
     ) engine=InnoDB;
 
     create table `worker` (
@@ -248,6 +306,8 @@
 
     alter table `descriptor_duty` 
        add constraint UK_kvr5rclgwa51d625rmx13ke96 unique (`duties_id`);
+    alter table `auditrecord` 
+       add constraint UK_92x21i1wqb15yaupkg918sxb7 unique (`job_id`);
 
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
@@ -281,10 +341,25 @@
        foreign key (`worker_id`) 
        references `worker` (`id`);
 
+    alter table `auditor` 
+       add constraint FK_clqcq9lyspxdxcp6o4f3vkelj 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
+    alter table `auditrecord` 
+       add constraint `FKa5p4w0gnuwmtb07juvrg8ptn6` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
+
     alter table `authenticated` 
        add constraint FK_h52w0f3wjoi68b63wv9vwon57 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `comercialbanner` 
+       add constraint `FKii9iupedxt6hx534i7mm6wjhv` 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
 
     alter table `consumer` 
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
@@ -315,15 +390,43 @@
        add constraint `FKfqwyynnbcsq0htxho3vchpd2u` 
        foreign key (`descriptor_id`) 
        references `descriptor` (`id`);
+       add constraint `FK15emyu82ye1j9lfl1wpo1i1ee` 
+       foreign key (`auditor_id`) 
+       references `auditor` (`id`);
 
     alter table `job` 
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 
        foreign key (`employer_id`) 
        references `employer` (`id`);
 
+    alter table `message` 
+       add constraint `FKhlmmbswdtxwq1f6w6gmj14oci` 
+       foreign key (`message_thread_id`) 
+       references `messagethread` (`id`);
+
+    alter table `noncomercialbanner` 
+       add constraint `FKiqlwh7t99w47gee8as9xvk5xt` 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
+
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
        foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
+    alter table `sponsor` 
+       add constraint FK_20xk0ev32hlg96kqynl6laie2 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
+    alter table `user_account_messagethread` 
+       add constraint `FK6yqqctsrjddklo56unt0r4tgh` 
+       foreign key (`messagethread_id`) 
+       references `messagethread` (`id`);
+
+    alter table `user_account_messagethread` 
+       add constraint `FKh8iu87gcefeem2dlwqgdo5vkg` 
+       foreign key (`users_id`) 
        references `user_account` (`id`);
 
     alter table `worker` 
