@@ -6,11 +6,10 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.auditrecords.Auditrecord;
+import acme.entities.auditrecord.Auditrecord;
 import acme.entities.roles.Auditor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
@@ -40,10 +39,8 @@ public class AuditorAuditrecordListMineService implements AbstractListService<Au
 	public Collection<Auditrecord> findMany(final Request<Auditrecord> request) {
 		assert request != null;
 		Collection<Auditrecord> result;
-		Principal principal;
 
-		principal = request.getPrincipal();
-		result = this.repository.findManyByJobId(principal.getActiveRoleId());
+		result = this.repository.findManyByJobId(request.getModel().getInteger("id"));
 		return result;
 	}
 

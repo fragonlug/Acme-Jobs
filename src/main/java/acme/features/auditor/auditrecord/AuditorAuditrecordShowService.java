@@ -4,7 +4,7 @@ package acme.features.auditor.auditrecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.auditrecords.Auditrecord;
+import acme.entities.auditrecord.Auditrecord;
 import acme.entities.roles.Auditor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -42,7 +42,7 @@ public class AuditorAuditrecordShowService implements AbstractShowService<Audito
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "status", "moment", "body", "job");
+		request.unbind(entity, model, "title", "status", "moment", "body");
 	}
 
 	@Override
