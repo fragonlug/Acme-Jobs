@@ -53,8 +53,11 @@
 
     alter table `job` 
        drop 
-       foreign key `FKfqwyynnbcsq0htxho3vchpd2u`;
+       foreign key `FK15emyu82ye1j9lfl1wpo1i1ee`;
 
+    alter table `job` 
+       drop 
+       foreign key `FKfqwyynnbcsq0htxho3vchpd2u`;
 
     alter table `job` 
        drop 

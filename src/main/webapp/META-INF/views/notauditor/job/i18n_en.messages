@@ -8,7 +8,7 @@ notauditor.job.form.label.title = Title:
 notnotauditor.job.form.label.deadline = Dead-Line:
 notnotauditor.job.form.label.salary = Salary:
 notnotauditor.job.form.label.moreInfo = More info:
-notnotauditor.job.form.label.description = Description:
+notnotauditor.job.form.label.descriptor = Descriptor:
 notnotauditor.job.form.label.button.return = Return
 
 

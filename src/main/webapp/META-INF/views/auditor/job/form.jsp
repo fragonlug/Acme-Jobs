@@ -9,7 +9,7 @@
 	<acme:form-moment code="auditor.job.form.label.deadline" path="deadline"/>
 	<acme:form-money code="auditor.job.form.label.salary" path="salary"/>
 	<acme:form-money code="auditor.job.form.label.moreInfo" path="moreInfo"/>
-	<acme:form-textbox code="auditor.job.form.label.description" path="description"/>
+	<acme:form-textbox code="auditor.job.form.label.descriptor" path="descriptorDescription"/>
 	<jstl:set var="id" value="${id}"/>
 	<h4><acme:menu-suboption code="auditor.auditrecord.form.label.listAuditrecord" action="/auditor/auditrecord/list_mine?id=${id}"/></h4>
 	
