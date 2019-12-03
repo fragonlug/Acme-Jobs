@@ -670,7 +670,7 @@
 		<property name="status" value="true"/>
 		<property name="moment" value="2019/11/27 17:00"/>
 		<property name="body" value="Example of audit record"/>
-		<property name="job" ref="job5"/>
+		<property name="job" ref="job3"/>
 	</bean>
 	<bean id="auditrecord2" class="acme.entities.auditrecord.Auditrecord">
 		<property name="title" value="Audit record 2"/>
@@ -692,6 +692,22 @@
 		<property name="moment" value="2018/11/30 19:00"/>
 		<property name="body" value="Example of audit record"/>
 		<property name="job" ref="job3"/>
+	</bean>
+	
+	<bean id="auditrecord5" class="acme.entities.auditrecord.Auditrecord">
+		<property name="title" value="Audit record 5"/>
+		<property name="status" value="false"/>
+		<property name="moment" value="2018/11/30 19:00"/>
+		<property name="body" value="Example of audit record 5"/>
+		<property name="job" ref="job1"/>
+	</bean>
+	 
+	<bean id="auditrecord6" class="acme.entities.auditrecord.Auditrecord">
+		<property name="title" value="Audit record 6"/>
+		<property name="status" value="false"/>
+		<property name="moment" value="2018/11/30 19:00"/>
+		<property name="body" value="Example of audit record 6"/>
+		<property name="job" ref="job1"/>
 	</bean>
 	
 	<!-- Messages & threads -->

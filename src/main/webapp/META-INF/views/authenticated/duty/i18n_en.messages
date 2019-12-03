@@ -3,6 +3,7 @@ authenticated.duty.list.label.percentage = Percentage
 authenticated.duty.list.label.description = Description
 
 
+
 authenticated.duty.form.label.jobTitle = Title of the job of this duty:
 authenticated.duty.form.label.jobId = Id of the job of this duty:
 authenticated.duty.form.label.title = Title:
