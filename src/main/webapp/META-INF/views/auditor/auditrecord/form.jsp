@@ -8,7 +8,6 @@
 	<acme:form-textbox code="auditor.auditrecord.form.label.status" path="status"/>
 	<acme:form-textbox code="auditor.auditrecord.form.label.moment" path="moment"/>
 	<acme:form-textbox code="auditor.auditrecord.form.label.body" path="body"/>
-	<acme:form-textbox code="auditor.auditrecord.form.label.job" path="job"/>
 	
 	<acme:form-return code="auditor.auditrecord.form.label.button.return"/>
 </acme:form>

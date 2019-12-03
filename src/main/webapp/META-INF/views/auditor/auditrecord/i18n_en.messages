@@ -7,7 +7,6 @@ auditor.auditrecord.form.label.title = Title:
 auditor.auditrecord.form.label.status = Status:
 auditor.auditrecord.form.label.moment = Moment:
 auditor.auditrecord.form.label.body = Body:
-auditor.auditrecord.form.label.job = Job:
 auditor.auditrecord.form.label.button.return = Return
 
 

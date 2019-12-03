@@ -4,7 +4,7 @@ package acme.features.employer.job.auditrecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.auditrecords.Auditrecord;
+import acme.entities.auditrecord.Auditrecord;
 import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
