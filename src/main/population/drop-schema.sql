@@ -35,13 +35,26 @@
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
 
+    alter table `descriptor_duty` 
+       drop 
+       foreign key `FK57eqqlhihwvd53ykpmsiqlx2p`;
+
+    alter table `descriptor_duty` 
+       drop 
+       foreign key `FKqitedkrksd2w8qyp1fp5eao9f`;
+
+    alter table `duty` 
+       drop 
+       foreign key `FK3cc3garl37bl7gswreqwr7pj4`;
+
     alter table `employer` 
        drop 
        foreign key FK_na4dfobmeuxkwf6p75abmb2tr;
 
     alter table `job` 
        drop 
-       foreign key `FK15emyu82ye1j9lfl1wpo1i1ee`;
+       foreign key `FKfqwyynnbcsq0htxho3vchpd2u`;
+
 
     alter table `job` 
        drop 
@@ -100,6 +113,12 @@
     drop table if exists `configuration`;
 
     drop table if exists `consumer`;
+
+    drop table if exists `descriptor`;
+
+    drop table if exists `descriptor_duty`;
+
+    drop table if exists `duty`;
 
     drop table if exists `employer`;
 
