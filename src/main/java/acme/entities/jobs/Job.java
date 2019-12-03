@@ -83,7 +83,7 @@ public class Job extends DomainEntity {
 	private Auditor		auditor;
 
 	@NotNull
-	@OneToOne(optional = false, mappedBy = "job")
+	@OneToOne(optional = false)
 	private Descriptor	descriptor;
 
 }

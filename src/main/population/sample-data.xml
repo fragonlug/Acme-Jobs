@@ -536,6 +536,27 @@
 	<!-- Jobs -->
 		<!-- Descriptors and duties -->
 		
+			
+		<bean id="descriptor1" class="acme.entities.descriptor.Descriptor">
+			<property name="description" value="Descriptor description"/>
+		</bean>
+		
+		<bean id="descriptor2" class="acme.entities.descriptor.Descriptor">
+			<property name="description" value="Descriptor description"/>
+		</bean>
+		
+		<bean id="descriptor3" class="acme.entities.descriptor.Descriptor">
+			<property name="description" value="Descriptor description"/>
+		</bean>
+		
+		<bean id="descriptor4" class="acme.entities.descriptor.Descriptor">
+			<property name="description" value="Descriptor description"/>
+		</bean>
+		
+		<bean id="descriptor5" class="acme.entities.descriptor.Descriptor">
+			<property name="description" value="Descriptor description"/>
+		</bean>
+		
 		<bean id="duty1" class="acme.entities.duties.Duty">
 			<property name="title" value="Duty 1"/>
 			<property name="description" value="Duty description"/>
@@ -544,15 +565,42 @@
 			
 		</bean>
 		
-		<bean id="descriptor1" class="acme.entities.descriptor.Descriptor">
-			<property name="description" value="Descriptor description"/>
-			<property name="job" ref="job1"/>
-			<property name="duties">
-				<list>
-					<ref bean="duty1"/>
-				</list>
-			</property>
+		<bean id="duty2" class="acme.entities.duties.Duty">
+			<property name="title" value="Duty 2"/>
+			<property name="description" value="Duty description"/>
+			<property name="percentage" value="15.0"/>
+			<property name="descriptor" ref="descriptor2"/>
+			
 		</bean>
+		
+		<bean id="duty3" class="acme.entities.duties.Duty">
+			<property name="title" value="Duty 3"/>
+			<property name="description" value="Duty description"/>
+			<property name="percentage" value="15.0"/>
+			<property name="descriptor" ref="descriptor3"/>
+			
+		</bean>
+		
+		<bean id="duty4" class="acme.entities.duties.Duty">
+			<property name="title" value="Duty 4"/>
+			<property name="description" value="Duty description"/>
+			<property name="percentage" value="15.0"/>
+			<property name="descriptor" ref="descriptor4"/>
+			
+		</bean>
+		
+		<bean id="duty5" class="acme.entities.duties.Duty">
+			<property name="title" value="Duty 5"/>
+			<property name="description" value="Duty description"/>
+			<property name="percentage" value="15.0"/>
+			<property name="descriptor" ref="descriptor5"/>
+			
+		</bean>
+		
+		
+	
+		
+		
 		
 	<bean id="job1" class="acme.entities.jobs.Job">
 		<property name="reference" value="EMPA-JOBA"/>
@@ -571,7 +619,7 @@
 		<property name="title" value="Title 2"/>
 		<property name="deadline" value="2025/12/11 23:59"/>
 		<property name="salary" value="€ 2,000.10"/>
-		<property name="descriptor" ref="descriptor1"/>
+		<property name="descriptor" ref="descriptor2"/>
 		<property name="moreInfo" value="https://www.example.es/"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer2Employer"/>
@@ -583,7 +631,7 @@
 		<property name="title" value="Title 3"/>
 		<property name="deadline" value="2024/11/01 23:59"/>
 		<property name="salary" value="€ 15,000.00"/>
-		<property name="descriptor" ref="descriptor1"/>
+		<property name="descriptor" ref="descriptor3"/>
 		<property name="moreInfo" value="https://www.example.es/"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer1Employer"/>
@@ -595,7 +643,7 @@
 		<property name="title" value="Title 4"/>
 		<property name="deadline" value="2029/12/11 12:59"/>
 		<property name="salary" value="€ 900,000.00"/>
-		<property name="descriptor" ref="descriptor1"/>
+		<property name="descriptor" ref="descriptor4"/>
 		<property name="moreInfo" value="https://www.example.es/"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer2Employer"/>
@@ -607,7 +655,7 @@
 		<property name="title" value="Title 5"/>
 		<property name="deadline" value="2015/12/11 23:59"/>
 		<property name="salary" value="€ 100.00"/>
-		<property name="descriptor" ref="descriptor1"/>
+		<property name="descriptor" ref="descriptor5"/>
 		<property name="moreInfo" value="https://www.example.es/"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer1Employer"/>

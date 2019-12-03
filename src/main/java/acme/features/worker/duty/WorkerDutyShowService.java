@@ -39,6 +39,7 @@ public class WorkerDutyShowService implements AbstractShowService<Worker, Duty> 
 		int id;
 		id = request.getModel().getInteger("id");
 		result = this.repository.findDutyById(id);
+
 		return result;
 	}
 
