@@ -54,10 +54,6 @@ public class Job extends DomainEntity {
 	@Valid
 	private Money				salary;
 
-	@NotNull
-	@OneToOne
-	private Descriptor			descriptor;
-
 	@URL
 	private String				moreInfo;
 
@@ -80,10 +76,14 @@ public class Job extends DomainEntity {
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Employer employer;
+	private Employer	employer;
 
 	@Valid
 	@ManyToOne(optional = false)
-	private Auditor				auditor;
+	private Auditor		auditor;
+
+	@NotNull
+	@OneToOne(optional = false, mappedBy = "job")
+	private Descriptor	descriptor;
 
 }

@@ -3,6 +3,7 @@ package acme.entities.duties;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -27,10 +28,22 @@ public class Duty extends DomainEntity {
 	@NotNull
 	private Double				percentage;
 
+
+	@Transient
+	public String getJobTitle() {
+		return this.descriptor.getJob().getTitle();
+	}
+
+	@Transient
+	public String getJobId() {
+		return this.descriptor.getJob().getTitle();
+	}
+
+
 	//relationships
 
 	@NotNull
 	@ManyToOne
-	private Descriptor			descriptor;
+	private Descriptor descriptor;
 
 }

@@ -1,0 +1,13 @@
+worker.duty.list.label.title = Título
+worker.duty.list.label.percentage = Porcentaje
+worker.duty.list.label.description = Descripción
+
+
+worker.duty.form.label.jobTitle = Titulo del trabajo de esta deber:
+worker.duty.form.label.jobId = Id del trabajo de este deber:
+worker.duty.form.label.title = Título:
+worker.duty.form.label.percentage = Porcentaje:
+worker.duty.form.label.description = Descripción:
+worker.duty.form.label.button.return = Volver
+
+
