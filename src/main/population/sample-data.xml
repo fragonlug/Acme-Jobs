@@ -402,6 +402,7 @@
 			<property name="title" value="Duty 1"/>
 			<property name="description" value="Duty description"/>
 			<property name="percentage" value="15.0"/>
+			<property name="descriptor" ref="descriptor1"/>
 		</bean>
 		
 		<bean id="descriptor1" class="acme.entities.descriptor.Descriptor">

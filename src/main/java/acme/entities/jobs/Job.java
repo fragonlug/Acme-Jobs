@@ -68,6 +68,11 @@ public class Job extends DomainEntity {
 		return this.descriptor.getDescription();
 	}
 
+	@Transient
+	public String getDescriptorId() {
+		return String.valueOf(this.descriptor.getId());
+	}
+
 
 	//	Relationships -------------------------------------------------------------------------
 

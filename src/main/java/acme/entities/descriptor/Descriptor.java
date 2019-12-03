@@ -28,9 +28,4 @@ public class Descriptor extends DomainEntity {
 	@OneToMany
 	private Collection<Duty>	duties;
 
-
-	@Transient
-	private String getDuties() {
-		return this.duties.toString();
-	}
 }

@@ -131,6 +131,7 @@
         `description` varchar(255),
         `percentage` double precision,
         `title` varchar(255),
+        `descriptor_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -297,6 +298,11 @@
 
     alter table `descriptor_duty` 
        add constraint `FKqitedkrksd2w8qyp1fp5eao9f` 
+       foreign key (`descriptor_id`) 
+       references `descriptor` (`id`);
+
+    alter table `duty` 
+       add constraint `FK3cc3garl37bl7gswreqwr7pj4` 
        foreign key (`descriptor_id`) 
        references `descriptor` (`id`);
 

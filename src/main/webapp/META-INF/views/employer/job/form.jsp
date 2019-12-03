@@ -10,6 +10,9 @@
 	<acme:form-money code="employer.job.form.label.salary" path="salary"/>
 	<acme:form-money code="employer.job.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-textbox code="employer.job.form.label.descriptor" path="descriptorDescription"/>
+	<jstl:set var="id" value="${descriptorId}"/>
+	<h4><acme:menu-suboption code="employer.job.form.label.duties" action="/employer/duty/list?id=${id}"/></h4>
+	
 
 
 	<acme:form-return code="employer.job.form.label.button.return"/>
