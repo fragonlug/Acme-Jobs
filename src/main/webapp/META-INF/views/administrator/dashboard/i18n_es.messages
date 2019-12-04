@@ -15,4 +15,5 @@ administrator.dashboard.form.label.stdevRequest= Desviación típica de la recom
 administrator.dashboard.form.label.stdevOffer= Desviación típica de la recompensa de las ofertas:
 administrator.dashboard.form.label.mediaJobsEmployer= Media de trabajos por empleador:
 administrator.dashboard.form.label.mediaApplicationWorker= Media de aplicaciones por trabajador:
+administrator.dashboard.form.label.mediaApplicationEmployer= Media de aplicaciones por empleador:
 administrator.configuration.form.label.button.return = Volver

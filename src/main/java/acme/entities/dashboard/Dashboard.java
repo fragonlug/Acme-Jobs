@@ -58,7 +58,7 @@ public class Dashboard implements Serializable {
 
 	private Double						avgJobEmployer;
 
-	//private Double						avgApplicationEmployer;
+	private Double						avgApplicationEmployer;
 
 	private Double						avgApplicationWorker;
 

@@ -15,4 +15,5 @@ administrator.dashboard.form.label.stdevRequest= Standard deviation of requests 
 administrator.dashboard.form.label.stdevOffer= Standard deviation of offers reward:
 administrator.dashboard.form.label.mediaJobsEmployer= Average number of jobs per employer:
 administrator.dashboard.form.label.mediaApplicationWorker= Average number of applications per worker:
+administrator.dashboard.form.label.mediaApplicationEmployer= Average number of applications per employer:
 administrator.configuration.form.label.button.return = Return

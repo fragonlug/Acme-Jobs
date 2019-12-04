@@ -47,7 +47,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert model != null;
 
 		request.unbind(entity, model, "totalAnnouncement", "totalInvestorsRecord", "totalCompanyRecords", "minRewardRequest", "maxRewardRequest", "minRewardOffers", "maxRewardOffers", "companysBySector", "sectorsOfCompanys", "inverstorsBySector",
-			"sectorsOfInverstors", "mediaRequest", "mediaOffer", "stdevRequest", "stdevOffer", "jobsByFinalMode", "statusOfApplication", "applicationByStatus", "avgJobEmployer", "avgApplicationWorker");
+			"sectorsOfInverstors", "mediaRequest", "mediaOffer", "stdevRequest", "stdevOffer", "jobsByFinalMode", "statusOfApplication", "applicationByStatus", "avgApplicationEmployer", "avgJobEmployer", "avgApplicationWorker");
 
 	}
 
@@ -73,7 +73,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setApplicationByStatus(this.getApplicationByStatus());
 		result.setStatusOfApplication(this.getStatusOfApplication());
 		result.setAvgJobEmployer(this.getMediaJobsPerEmployer());
-		// result.setAvgApplicationEmployer(this.getMediaApplicationPerEmployer());
+		result.setAvgApplicationEmployer(this.getMediaApplicationPerEmployer());
 		result.setAvgApplicationWorker(this.getMediaApplicationPerWorker());
 
 		return result;
@@ -194,12 +194,12 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		Double res = this.repository.getMediaJobsPerEmployer();
 		return res;
 	}
-	/*
-	 * public Double getMediaApplicationPerEmployer() {
-	 * Double res = this.repository.getMediaApplicationPerEmployer();
-	 * return res;
-	 * }
-	 */
+
+	public Double getMediaApplicationPerEmployer() {
+		Double res = this.repository.getMediaApplicationPerEmployer();
+		return res;
+	}
+
 	public Double getMediaApplicationPerWorker() {
 		Double res = this.repository.getMediaApplicationPerWorker();
 		return res;

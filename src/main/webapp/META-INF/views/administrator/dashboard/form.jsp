@@ -17,8 +17,7 @@
 	<acme:form-double code="administrator.dashboard.form.label.stdevOffer" path="stdevOffer"/>
 	<acme:form-double code="administrator.dashboard.form.label.mediaJobsEmployer" path="avgJobEmployer"/>
 	<acme:form-double code="administrator.dashboard.form.label.mediaApplicationWorker" path="avgApplicationWorker"/>
-	 
-	
+	 <acme:form-double code="administrator.dashboard.form.label.mediaApplicationEmployer" path="avgApplicationEmployer"/>
 	
 </acme:form>
 

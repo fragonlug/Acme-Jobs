@@ -61,10 +61,10 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 
 	@Query("select avg( select count(j) from Job j where j.employer.id = e.id ) from Employer e")
 	Double getMediaJobsPerEmployer();
-	/*
-	 * @Query("select avg( select count(a) from Application a where a.employer.id = e.id ) from Employer e")
-	 * Double getMediaApplicationPerEmployer();
-	 */
+
+	@Query("select avg( select count(a) from Application a where a.job.employer.id = e.id ) from Employer e")
+	Double getMediaApplicationPerEmployer();
+
 	@Query("select avg( select count(a) from Application a where a.worker.id = w.id ) from Worker w")
 	Double getMediaApplicationPerWorker();
 
