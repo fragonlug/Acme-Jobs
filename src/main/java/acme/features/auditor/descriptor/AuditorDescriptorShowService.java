@@ -29,7 +29,7 @@ public class AuditorDescriptorShowService implements AbstractShowService<Auditor
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "description", "job.title");
+		request.unbind(entity, model, "description", "job.title", "jobTitle", "jobId");
 
 	}
 

@@ -4,6 +4,9 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
+
+	<acme:form-textarea code="authenticated.duty.form.label.jobTitle" path="jobTitle"/>
+	<acme:form-integer code="authenticated.duty.form.label.jobId" path="jobId"/>
 	
 	<acme:form-textarea code="authenticated.descriptor.form.label.description" path="description"/>
 	<jstl:set var="id" value="${id}"/>

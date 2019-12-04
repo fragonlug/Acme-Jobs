@@ -1,13 +1,10 @@
 
 package acme.entities.descriptor;
 
-
-import java.util.Collection;
-
 import javax.persistence.Column;
-
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -32,5 +29,17 @@ public class Descriptor extends DomainEntity {
 	@NotNull
 	@OneToOne
 	private Job					job;
+
+
+	@Transient
+	public String getJobTitle() {
+		return this.job.getTitle();
+	}
+
+	@Transient
+	public Integer getJobId() {
+
+		return this.job.getId();
+	}
 
 }

@@ -37,8 +37,8 @@ public class Duty extends DomainEntity {
 	}
 
 	@Transient
-	public String getJobId() {
-		return this.descriptor.getJob().getTitle();
+	public Integer getJobId() {
+		return this.descriptor.getJob().getId();
 	}
 
 
