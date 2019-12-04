@@ -32,10 +32,8 @@ public class Messagethread extends DomainEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date					moment;
 
-	@NotNull
 	private String					usernames;
 
-	@NotNull
 	private String					message;
 
 	//Relationships
