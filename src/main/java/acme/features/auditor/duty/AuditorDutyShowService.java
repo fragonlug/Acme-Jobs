@@ -29,7 +29,7 @@ public class AuditorDutyShowService implements AbstractShowService<Auditor, Duty
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "description", "percentage");
+		request.unbind(entity, model, "title", "description", "percentage", "jobTitle", "jobId");
 
 	}
 
