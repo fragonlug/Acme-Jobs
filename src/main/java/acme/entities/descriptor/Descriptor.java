@@ -1,6 +1,11 @@
 
 package acme.entities.descriptor;
 
+
+import java.util.Collection;
+
+import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.NotBlank;
@@ -19,6 +24,7 @@ public class Descriptor extends DomainEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				description;
 
 	//relationships

@@ -4,7 +4,7 @@ authenticated.job.list.label.title = Title
 
 
 
-authenticated.job.form.label.reference = Reference:
+authenticated.job.form.label.reference = Reference (try to fix this pattern: e.g:EMP1-JOB3)::
 authenticated.job.form.label.title = Title:
 authenticated.job.form.label.deadline = Dead-Line:
 authenticated.job.form.label.salary = Salary:
