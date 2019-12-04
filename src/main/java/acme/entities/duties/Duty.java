@@ -29,6 +29,18 @@ public class Duty extends DomainEntity {
 	@NotNull
 	private Double				percentage;
 
+	/*
+	 * @Transient
+	 * public String getJobTitle() {
+	 * return this.descriptor.getJob().getTitle();
+	 * }
+	 * 
+	 * @Transient
+	 * public String getJobId() {
+	 * return this.descriptor.getJob().getTitle();
+	 * }
+	 */
+
 	//relationships
 
 	@NotNull

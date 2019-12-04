@@ -46,14 +46,6 @@ public class AuthenticatedJobListService implements AbstractListService<Authenti
 		calendar.add(Calendar.MONTH, -1);
 
 		return result.stream().filter(x -> !(x.getDeadline().compareTo(calendar.getTime()) < 0)).collect(Collectors.toList());
-
-		/*
-		 * Collection<Announcement> result;
-		 * result = this.repository.findManyAll();
-		 * Calendar calendar = Calendar.getInstance();
-		 * calendar.add(Calendar.MONTH, -1);
-		 * return result.stream().filter(x -> !(x.getMoment().compareTo(calendar.getTime()) < 0)).collect(Collectors.toList());
-		 */
 	}
 
 }

@@ -1,5 +1,5 @@
 
-package acme.features.employer.job.auditrecord;
+package acme.features.employer.auditrecord;
 
 import java.util.Collection;
 
@@ -10,7 +10,6 @@ import acme.entities.auditrecord.Auditrecord;
 import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
@@ -40,10 +39,8 @@ public class EmployerAuditrecordListMineService implements AbstractListService<E
 	public Collection<Auditrecord> findMany(final Request<Auditrecord> request) {
 		assert request != null;
 		Collection<Auditrecord> result;
-		Principal principal;
 
-		principal = request.getPrincipal();
-		result = this.repository.findManyByJobId(principal.getActiveRoleId());
+		result = this.repository.findManyByJobId(request.getModel().getInteger("id"));
 		return result;
 	}
 

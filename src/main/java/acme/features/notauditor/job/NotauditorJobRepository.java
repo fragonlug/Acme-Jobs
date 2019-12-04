@@ -18,3 +18,4 @@ public interface NotauditorJobRepository extends AbstractRepository {
 	@Query("select j from Job j where not j.auditor.id = ?1")
 	Collection<Job> findManyByAuditorId(int AuditorId);
 }
+// select j from Job j where  j.id not in (select ar job.id from AuditRecord ar where ar.auditor_id=?1)

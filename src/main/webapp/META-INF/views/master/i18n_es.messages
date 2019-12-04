@@ -103,12 +103,13 @@ master.menu.consumer.requestList = Lista de peticiones
 
 master.menu.employer = Empleador
 master.menu.employer.jobList = Lista de mis trabajos
+master.menu.employer.applicationList = Lista de aplicaciones a mis trabajos
 
 # master.menu.worker ##########################################################
 
 master.menu.worker = Trabajador
 master.menu.worker.applicationList = Lista de mis aplicaciones
-master.menu.employer.applicationList = Lista de aplicaciones a mis trabajos
+master.menu.worker.job.list = Lista de ofertas de trabajo activas
 
 
 # master.menu.user-account ####################################################

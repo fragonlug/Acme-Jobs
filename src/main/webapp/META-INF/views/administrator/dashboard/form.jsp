@@ -15,6 +15,9 @@
 	<acme:form-double code="administrator.dashboard.form.label.mediaOffer" path="mediaOffer"/>
 	<acme:form-double code="administrator.dashboard.form.label.stdevRequest" path="stdevRequest"/>
 	<acme:form-double code="administrator.dashboard.form.label.stdevOffer" path="stdevOffer"/>
+	<acme:form-double code="administrator.dashboard.form.label.mediaJobsEmployer" path="avgJobEmployer"/>
+	<acme:form-double code="administrator.dashboard.form.label.mediaApplicationWorker" path="avgApplicationWorker"/>
+	 <acme:form-double code="administrator.dashboard.form.label.mediaApplicationEmployer" path="avgApplicationEmployer"/>
 	
 </acme:form>
 
@@ -37,7 +40,8 @@
 							"${item}",
 							</jstl:forEach>
 							
-						]
+						],
+						 backgroundColor: ["#0074D9", "#FF4136", "#2ECC40", "#FF851B", "#7FDBFF", "#B10DC9", "#FFDC00", "#001f3f", "#39CCCC", "#01FF70", "#85144b", "#F012BE", "#3D9970", "#111111", "#AAAAAA"]
 					
 				}
 					]
@@ -92,7 +96,8 @@
 							${item},
 							</jstl:forEach>
 							
-						]
+						],
+						 backgroundColor: ["#0074D9", "#FF4136", "#2ECC40", "#FF851B", "#7FDBFF", "#B10DC9", "#FFDC00", "#001f3f", "#39CCCC", "#01FF70", "#85144b", "#F012BE", "#3D9970", "#111111", "#AAAAAA"]
 					
 				}
 					]
@@ -135,6 +140,7 @@
 	<h2><acme:message code="administrator.dashboard.form.title.chartJobs"/></h2>
 	<div><canvas id="canvas3"></canvas></div>
 	<script type="text/javascript">
+	
 	$(document).ready(function(){
 		var data = {
 				labels	:	["open","closed"],
@@ -145,7 +151,8 @@
 							"${item}",
 							</jstl:forEach>
 							
-						]
+						],
+						 backgroundColor: ["#0074D9", "#FF4136", "#2ECC40", "#FF851B", "#7FDBFF", "#B10DC9", "#FFDC00", "#001f3f", "#39CCCC", "#01FF70", "#85144b", "#F012BE", "#3D9970", "#111111", "#AAAAAA"]
 					
 				}
 					]
@@ -174,10 +181,11 @@
 	canvas = document.getElementById("canvas3");
 	context = canvas.getContext("2d");
 	new Chart(context, {
-		type	:	"bar",
+		type	:	"pie",
 		data	:	data,
 		options	:	options
 	});
+	
 });
 	</script>
 	
@@ -202,7 +210,8 @@
 							"${item}",
 							</jstl:forEach>
 							
-						]
+						],
+						 backgroundColor: ["#0074D9", "#FF4136", "#2ECC40", "#FF851B", "#7FDBFF", "#B10DC9", "#FFDC00", "#001f3f", "#39CCCC", "#01FF70", "#85144b", "#F012BE", "#3D9970", "#111111", "#AAAAAA"]
 					
 				}
 					]
@@ -231,7 +240,7 @@
 	canvas = document.getElementById("canvas4");
 	context = canvas.getContext("2d");
 	new Chart(context, {
-		type	:	"bar",
+		type	:	"doughnut",
 		data	:	data,
 		options	:	options
 	});

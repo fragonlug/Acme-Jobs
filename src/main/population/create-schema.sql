@@ -138,12 +138,8 @@
        `id` integer not null,
         `version` integer not null,
         `description` varchar(255),
+        `job_id` integer,
         primary key (`id`)
-    ) engine=InnoDB;
-
-    create table `descriptor_duty` (
-       `descriptor_id` integer not null,
-        `duties_id` integer not null
     ) engine=InnoDB;
 
     create table `duty` (
@@ -186,7 +182,6 @@
         `salary_currency` varchar(255),
         `title` varchar(255),
         `auditor_id` integer not null,
-        `descriptor_id` integer,
         `employer_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -205,7 +200,6 @@
     create table `messagethread` (
        `id` integer not null,
         `version` integer not null,
-        `message` varchar(255),
         `moment` datetime(6),
         `title` varchar(255),
         `usernames` varchar(255),
@@ -304,12 +298,6 @@
     alter table `application` 
        add constraint UK_ct7r18vvxl5g4c4k7aefpa4do unique (`reference`);
 
-    alter table `auditrecord` 
-       add constraint UK_92x21i1wqb15yaupkg918sxb7 unique (`job_id`);
-
-    alter table `descriptor_duty` 
-       add constraint UK_kvr5rclgwa51d625rmx13ke96 unique (`duties_id`);
-
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
 
@@ -367,15 +355,10 @@
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
-    alter table `descriptor_duty` 
-       add constraint `FK57eqqlhihwvd53ykpmsiqlx2p` 
-       foreign key (`duties_id`) 
-       references `duty` (`id`);
-
-    alter table `descriptor_duty` 
-       add constraint `FKqitedkrksd2w8qyp1fp5eao9f` 
-       foreign key (`descriptor_id`) 
-       references `descriptor` (`id`);
+    alter table `descriptor` 
+       add constraint `FKgfulfilmwi4hhaquiu7fr5g0g` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
 
     alter table `duty` 
        add constraint `FK3cc3garl37bl7gswreqwr7pj4` 
@@ -391,11 +374,6 @@
        add constraint `FK15emyu82ye1j9lfl1wpo1i1ee` 
        foreign key (`auditor_id`) 
        references `auditor` (`id`);
-
-    alter table `job` 
-       add constraint `FKfqwyynnbcsq0htxho3vchpd2u` 
-       foreign key (`descriptor_id`) 
-       references `descriptor` (`id`);
 
     alter table `job` 
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 

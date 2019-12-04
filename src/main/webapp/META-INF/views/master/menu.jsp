@@ -99,8 +99,7 @@
 		
 		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">
 		<acme:menu-suboption code="master.menu.worker.applicationList" action="/worker/application/list_mine"/>
-		<acme:menu-suboption code="master.menu.authenticated.job.list" action="/authenticated/job/list"/>
-		
+		<acme:menu-suboption code="master.menu.worker.job.list" action="/worker/job/list"/>
 		</acme:menu-option>
 	
 	</acme:menu-left>

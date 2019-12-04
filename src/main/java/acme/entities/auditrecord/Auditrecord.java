@@ -5,9 +5,10 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -38,11 +39,22 @@ public class Auditrecord extends DomainEntity {
 	@Column(length = 1024)
 	private String				body;
 
+
+	@Transient
+	public String getJobTitle() {
+		return this.job.getTitle();
+	}
+
+	@Transient
+	public String getJobId() {
+		return this.job.getTitle();
+	}
 	//	Relationships -------------------------------------------------------------------------
+
 
 	@NotNull
 	@Valid
-	@OneToOne(optional = false)
-	private Job					job;
+	@ManyToOne(optional = false)
+	private Job job;
 
 }
