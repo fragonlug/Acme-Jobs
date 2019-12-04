@@ -4,6 +4,9 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
+	<acme:form-textarea code="authenticated.message.form.label.threadTitle" path="threadTitle"/>
+	<acme:form-integer code="authenticated.message.form.label.threadId" path="threadId"/>
+	
 	<acme:form-textarea code="authenticated.message.form.label.title" path="title"/>
 	<acme:form-moment code="authenticated.message.form.label.moment" path="moment"/>
 	<acme:form-textarea code="authenticated.message.form.label.tags" path="tags"/>

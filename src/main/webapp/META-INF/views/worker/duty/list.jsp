@@ -16,7 +16,8 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="worker.duty.list.label.title" path="title" width="30%"/>		
-	<acme:list-column code="worker.duty.list.label.percentage" path="percentage" width="10%"/>	
-	<acme:list-column code="worker.duty.list.label.description" path="description" width="60%"/>	
+	<acme:list-column code="authenticated.duty.list.label.title" path="title" width="30%"/>		
+	<acme:list-column code="authenticated.duty.list.label.percentage" path="percentage" width="10%"/>	
+	<acme:list-column code="authenticated.duty.list.label.description" path="description" width="60%"/>	
+	
 </acme:list>
