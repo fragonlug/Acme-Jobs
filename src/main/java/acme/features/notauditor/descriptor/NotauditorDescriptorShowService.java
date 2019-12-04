@@ -29,7 +29,7 @@ public class NotauditorDescriptorShowService implements AbstractShowService<Audi
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "description");
+		request.unbind(entity, model, "description", "jobTitle", "jobId");
 
 	}
 
