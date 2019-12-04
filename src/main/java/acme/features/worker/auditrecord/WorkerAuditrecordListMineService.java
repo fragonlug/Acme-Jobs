@@ -1,20 +1,22 @@
 
-package acme.features.authenticated.auditrecord;
+package acme.features.worker.auditrecord;
+
+import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.auditrecord.Auditrecord;
+import acme.entities.roles.Worker;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
-import acme.framework.services.AbstractShowService;
+import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedAuditrecordShowService implements AbstractShowService<Authenticated, Auditrecord> {
+public class WorkerAuditrecordListMineService implements AbstractListService<Worker, Auditrecord> {
 
 	@Autowired
-	AuthenticatedAuditrecordRepository repository;
+	WorkerAuditrecordRepository repository;
 
 
 	@Override
@@ -30,17 +32,15 @@ public class AuthenticatedAuditrecordShowService implements AbstractShowService<
 		assert model != null;
 
 		request.unbind(entity, model, "title", "status", "moment", "body", "job");
+
 	}
 
 	@Override
-	public Auditrecord findOne(final Request<Auditrecord> request) {
+	public Collection<Auditrecord> findMany(final Request<Auditrecord> request) {
 		assert request != null;
+		Collection<Auditrecord> result;
 
-		Auditrecord result;
-		int id;
-
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneAuditrecordById(id);
+		result = this.repository.findManyByJobId(request.getModel().getInteger("id"));
 		return result;
 	}
 

@@ -4,13 +4,10 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-textarea code="authenticated.auditrecord.form.label.jobTitle" path="jobTitle"/>
-	<acme:form-integer code="authenticated.auditrecord.form.label.jobId" path="jobId"/>
-
 	<acme:form-textbox code="authenticated.auditrecord.form.label.title" path="title"/>
 	<acme:form-textbox code="authenticated.auditrecord.form.label.status" path="status"/>
 	<acme:form-textbox code="authenticated.auditrecord.form.label.moment" path="moment"/>
-	<acme:form-textbox code="authenticated.auditrecord.form.label.body" path="body"/>
+	<acme:form-textbox code="authenticated.auditrecord.form.label.body" path="body"/>	
 	
 	<acme:form-return code="authenticated.auditrecord.form.label.button.return"/>
 </acme:form>

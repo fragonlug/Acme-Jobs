@@ -8,8 +8,7 @@ employer.job.form.label.title = Title:
 employer.job.form.label.deadline = Dead-Line:
 employer.job.form.label.salary = Salary:
 employer.job.form.label.moreInfo = More info:
-employer.job.form.label.descriptor = Descriptor:
-employer.job.form.label.duties = Click here to see the list of duties
+employer.auditrecord.form.label.listAuditrecord = List of audit records
 employer.job.form.label.button.return = Return
 
 

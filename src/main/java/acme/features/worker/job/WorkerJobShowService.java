@@ -30,7 +30,7 @@ public class WorkerJobShowService implements AbstractShowService<Worker, Job> {
 		assert model != null;
 
 		request.unbind(entity, model, "reference", "title", "deadline");
-		request.unbind(entity, model, "salary", "moreInfo", "descriptorDescription", "finalMode", "descriptorId");
+		request.unbind(entity, model, "salary", "moreInfo", "finalMode");
 	}
 
 	@Override

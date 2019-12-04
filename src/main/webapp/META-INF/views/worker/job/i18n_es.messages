@@ -8,8 +8,7 @@ worker.job.form.label.title = Título:
 worker.job.form.label.deadline = Fecha límite:
 worker.job.form.label.salary = Salario:
 worker.job.form.label.moreInfo = Más información:
-worker.job.form.label.description = Descripción:
-worker.job.form.label.duties = Pinche aqui para ver la lista de responsabilidades
+worker.auditrecord.form.label.listAuditrecord = Lista de registros de auditorias
 worker.job.form.label.button.return = Volver
 
 

@@ -9,10 +9,9 @@
 	<acme:form-moment code="worker.job.form.label.deadline" path="deadline"/>
 	<acme:form-money code="worker.job.form.label.salary" path="salary"/>
 	<acme:form-money code="worker.job.form.label.moreInfo" path="moreInfo"/>
-	<acme:form-textbox code="worker.job.form.label.descriptor" path="descriptorDescription"/>
-	<jstl:set var="id" value="${descriptorId}"/>
-	<h4><acme:menu-suboption code="worker.job.form.label.duties" action="/worker/duty/list?id=${id}"/></h4>
-  	
+	<jstl:set var="id" value="${id}"/>
+	<h4><acme:menu-suboption code="worker.auditrecord.form.label.listAuditrecord" action="/worker/auditrecord/list_mine?id=${id}"/></h4>
+	
 	
 
 

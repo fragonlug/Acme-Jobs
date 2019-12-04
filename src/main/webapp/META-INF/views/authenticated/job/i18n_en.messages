@@ -9,7 +9,6 @@ authenticated.job.form.label.title = Title:
 authenticated.job.form.label.deadline = Dead-Line:
 authenticated.job.form.label.salary = Salary:
 authenticated.job.form.label.moreInfo = More info:
-authenticated.job.form.label.descriptor = Description:
 authenticated.job.form.label.duties = Click here to see the list of duties
 authenticated.job.form.label.auditRecords = Click here to see the list of audit records of the job
 authenticated.job.form.label.button.return = Return

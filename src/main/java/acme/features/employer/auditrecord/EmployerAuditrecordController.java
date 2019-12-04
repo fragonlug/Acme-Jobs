@@ -1,5 +1,5 @@
 
-package acme.features.employer.job.auditrecord;
+package acme.features.employer.auditrecord;
 
 import javax.annotation.PostConstruct;
 
@@ -14,7 +14,7 @@ import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 
 @Controller
-@RequestMapping("/employer/job/auditrecord/")
+@RequestMapping("/employer/auditrecord/")
 public class EmployerAuditrecordController extends AbstractController<Employer, Auditrecord> {
 
 	@Autowired

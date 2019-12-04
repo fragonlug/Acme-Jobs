@@ -8,8 +8,7 @@ worker.job.form.label.title = Title:
 worker.job.form.label.deadline = Dead-Line:
 worker.job.form.label.salary = Salary:
 worker.job.form.label.moreInfo = More info:
-worker.job.form.label.descriptor = Description:
-worker.job.form.label.duties = Click here to see the list of duties
+worker.auditrecord.form.label.listAuditrecord = List of audit records
 worker.job.form.label.button.return = Return
 
 

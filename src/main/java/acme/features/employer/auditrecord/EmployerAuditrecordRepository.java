@@ -1,5 +1,5 @@
 
-package acme.features.employer.job.auditrecord;
+package acme.features.employer.auditrecord;
 
 import java.util.Collection;
 
