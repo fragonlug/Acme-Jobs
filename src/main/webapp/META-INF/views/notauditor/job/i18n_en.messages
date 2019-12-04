@@ -1,14 +1,16 @@
-notauditor.job.list.label.reference = Reference
-notauditor.job.list.label.deadline = Dead-Line
-notauditor.job.list.label.title = Title
+authenticated.job.list.label.reference = Reference
+authenticated.job.list.label.deadline = Dead-Line
+authenticated.job.list.label.title = Title
 
 
-notauditor.job.form.label.reference = Reference:
-notauditor.job.form.label.title = Title:
-notnotauditor.job.form.label.deadline = Dead-Line:
-notnotauditor.job.form.label.salary = Salary:
-notnotauditor.job.form.label.moreInfo = More info:
-notnotauditor.job.form.label.descriptor = Descriptor:
-notnotauditor.job.form.label.button.return = Return
+
+authenticated.job.form.label.reference = Reference:
+authenticated.job.form.label.title = Title:
+authenticated.job.form.label.deadline = Dead-Line:
+authenticated.job.form.label.salary = Salary:
+authenticated.job.form.label.moreInfo = More info:
+authenticated.job.form.label.duties = Click here to see the descriptor
+authenticated.job.form.label.auditRecords = Click here to see the list of audit records of the job
+authenticated.job.form.label.button.return = Return
 
 

@@ -593,27 +593,27 @@
 		
 			
 		<bean id="descriptor1" class="acme.entities.descriptor.Descriptor">
-			<property name="description" value="Descriptor description"/>
+			<property name="description" value="Descriptor1 description"/>
 			<property name="job" ref="job1"/>
 		</bean>
 		
 		<bean id="descriptor2" class="acme.entities.descriptor.Descriptor">
-			<property name="description" value="Descriptor description"/>
+			<property name="description" value="Descriptor2 description"/>
 			<property name="job" ref="job2"/>
 		</bean>
 		
 		<bean id="descriptor3" class="acme.entities.descriptor.Descriptor">
-			<property name="description" value="Descriptor description"/>
+			<property name="description" value="Descriptor3 description"/>
 			<property name="job" ref="job3"/>
 		</bean>
 		
 		<bean id="descriptor4" class="acme.entities.descriptor.Descriptor">
-			<property name="description" value="Descriptor description"/>
+			<property name="description" value="Descriptor4 description"/>
 			<property name="job" ref="job4"/>
 		</bean>
 		
 		<bean id="descriptor5" class="acme.entities.descriptor.Descriptor">
-			<property name="description" value="Descriptor description"/>
+			<property name="description" value="Descriptor5 description"/>
 			<property name="job" ref="job5"/>
 		</bean>
 		
