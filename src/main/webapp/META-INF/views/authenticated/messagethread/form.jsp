@@ -7,7 +7,6 @@
 	<acme:form-textarea code="authenticated.messagethread.form.label.title" path="title"/>
 	<acme:form-moment code="authenticated.messagethread.form.label.moment" path="moment"/>
 	<acme:form-textarea code="authenticated.messagethread.form.label.usernames" path="usernames"/>
-	<acme:form-textarea code="authenticated.messagethread.form.label.message" path="message"/>
 	<jstl:set var="id" value="${id}"/>
 	<h4><acme:menu-suboption code="authenticated.messagethread.form.label.listMessage" action="/authenticated/message/list_mine?id=${id}"/></h4>
 

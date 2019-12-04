@@ -1,6 +1,7 @@
 
 package acme.entities.companyrecords;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
@@ -33,6 +34,7 @@ public class Companyrecord extends DomainEntity {
 	private String				ceo;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				description;
 
 	@NotBlank
@@ -41,7 +43,7 @@ public class Companyrecord extends DomainEntity {
 
 	//[[(][0-9] {1,4}[)][\\s]]?
 	@NotBlank
-	@Pattern(regexp = "^([+][0-9]{1,3}[\\s])?([(][0-9]{1,4}[)][\\s])?[0-9]{6,10}$")
+	@Pattern(regexp = "^([+][0-9]{1,3}[\\s])?([(][0-9]{1,4}[)][\\s])?[0-9]{6,10}$", message = "companyrecord.pattern.error")
 	private String				phone;
 
 	@NotBlank
@@ -65,28 +67,28 @@ public class Companyrecord extends DomainEntity {
 	 * case 0:
 	 * stars = "-";
 	 * break;
-	 * 
+	 *
 	 * case 1:
 	 * stars = "★";
 	 * break;
-	 * 
+	 *
 	 * case 2:
 	 * stars = "★★";
 	 * break;
-	 * 
+	 *
 	 * case 3:
 	 * stars = "★★★";
 	 * break;
-	 * 
+	 *
 	 * case 4:
 	 * stars = "★★★★";
 	 * break;
-	 * 
+	 *
 	 * case 5:
 	 * stars = "★★★★★";
 	 * break;
 	 * }
-	 * 
+	 *
 	 * }
 	 * return stars;
 	 * }

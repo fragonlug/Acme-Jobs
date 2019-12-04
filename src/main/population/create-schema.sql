@@ -154,11 +154,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `descriptor_duty` (
-       `descriptor_id` integer not null,
-        `duties_id` integer not null
-    ) engine=InnoDB;
-
     create table `duty` (
        `id` integer not null,
         `version` integer not null,
@@ -217,7 +212,6 @@
     create table `messagethread` (
        `id` integer not null,
         `version` integer not null,
-        `message` varchar(255),
         `moment` datetime(6),
         `title` varchar(255),
         `usernames` varchar(255),
@@ -315,15 +309,6 @@
     alter table `application` 
        add constraint UK_ct7r18vvxl5g4c4k7aefpa4do unique (`reference`);
 
-    alter table `auditrecord` 
-       add constraint UK_92x21i1wqb15yaupkg918sxb7 unique (`job_id`);
-
-    alter table `credit_card` 
-       add constraint UK_4cr95y27s8ti6otoyflmma6oy unique (`sponsor_id`);
-
-    alter table `descriptor_duty` 
-       add constraint UK_kvr5rclgwa51d625rmx13ke96 unique (`duties_id`);
-
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
 
@@ -390,16 +375,6 @@
        add constraint `FKgfulfilmwi4hhaquiu7fr5g0g` 
        foreign key (`job_id`) 
        references `job` (`id`);
-
-    alter table `descriptor_duty` 
-       add constraint `FK57eqqlhihwvd53ykpmsiqlx2p` 
-       foreign key (`duties_id`) 
-       references `duty` (`id`);
-
-    alter table `descriptor_duty` 
-       add constraint `FKqitedkrksd2w8qyp1fp5eao9f` 
-       foreign key (`descriptor_id`) 
-       references `descriptor` (`id`);
 
     alter table `duty` 
        add constraint `FK3cc3garl37bl7gswreqwr7pj4` 

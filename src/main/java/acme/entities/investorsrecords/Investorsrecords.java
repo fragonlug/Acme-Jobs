@@ -1,6 +1,7 @@
 
 package acme.entities.investorsrecords;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -27,6 +28,7 @@ public class Investorsrecords extends DomainEntity {
 	private String				sector;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				statement;
 
 	@Min(0)
@@ -42,28 +44,28 @@ public class Investorsrecords extends DomainEntity {
 	 * case 0:
 	 * stars = "-";
 	 * break;
-	 * 
+	 *
 	 * case 1:
 	 * stars = "★";
 	 * break;
-	 * 
+	 *
 	 * case 2:
 	 * stars = "★★";
 	 * break;
-	 * 
+	 *
 	 * case 3:
 	 * stars = "★★★";
 	 * break;
-	 * 
+	 *
 	 * case 4:
 	 * stars = "★★★★";
 	 * break;
-	 * 
+	 *
 	 * case 5:
 	 * stars = "★★★★★";
 	 * break;
 	 * }
-	 * 
+	 *
 	 * }
 	 * return stars;
 	 * }

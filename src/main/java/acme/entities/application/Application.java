@@ -32,7 +32,7 @@ public class Application extends DomainEntity {
 
 	@Column(unique = true)
 	@NotBlank
-	@Pattern(regexp = "^[a-zA-Z]{4}[-][a-zA-Z]{4}[:][a-zA-Z]{4}$")
+	//	@Pattern(regexp = "^[a-zA-Z]{4}[-][a-zA-Z]{4}[:][a-zA-Z]{4}$", message = "application.pattern.error")
 	private String				reference;
 
 	@NotNull
@@ -40,16 +40,19 @@ public class Application extends DomainEntity {
 	private Date				moment;
 
 	@NotBlank
-	@Pattern(regexp = "^(pending)|(accepted)|(rejected)$")
+	@Pattern(regexp = "^(pending)|(accepted)|(rejected)$", message = "application.pattern.error")
 	private String				status;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				skills;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				statement;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				qualifications;
 
 	//	Relationships -------------------------------------------------------------------------

@@ -6,19 +6,15 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.descriptor.Descriptor;
 import acme.entities.roles.Auditor;
 import acme.entities.roles.Employer;
 import acme.framework.datatypes.Money;
@@ -40,7 +36,7 @@ public class Job extends DomainEntity {
 	@Column(unique = true)
 	@NotBlank
 	@Length(min = 5, max = 10)
-	@Pattern(regexp = "^[a-zA-Z]{4}[-][a-zA-Z]{4}$")
+	//@Pattern(regexp = "^[a-zA-Z]{4}[-][a-zA-Z]{4}$")
 	private String				reference;
 
 	@NotBlank
@@ -59,31 +55,36 @@ public class Job extends DomainEntity {
 
 	private boolean				finalMode;
 
-
-	@Transient
-	public String getDescriptorDescription() {
-		return this.descriptor.getDescription();
-	}
-
-	@Transient
-	public String getDescriptorId() {
-		return String.valueOf(this.descriptor.getId());
-	}
-
+	/*
+	 * @Transient
+	 * public String getDescriptorDescription() {
+	 * return this.descriptor.getDescription();
+	 * }
+	 * 
+	 * @Transient
+	 * public String getDescriptorId() {
+	 * return String.valueOf(this.descriptor.getId());
+	 * }
+	 */
 
 	//	Relationships -------------------------------------------------------------------------
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Employer	employer;
+
+	private Employer			employer;
+
 
 	@Valid
 	@ManyToOne(optional = false)
 	private Auditor		auditor;
 
-	@NotNull
-	@OneToOne(optional = false, mappedBy = "job")
-	private Descriptor	descriptor;
+	/*
+	 * @NotNull
+	 * 
+	 * @OneToOne(optional = false)
+	 * private Descriptor descriptor;
+	 */
 
 }
