@@ -41,6 +41,7 @@ public class Request extends DomainEntity {
 	private Date				deadLine;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				description;
 
 	@NotNull
@@ -48,6 +49,6 @@ public class Request extends DomainEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^[R][a-zA-Z]{4}[-][0-9]{5}$")
+	@Pattern(regexp = "^[R][a-zA-Z]{4}[-][0-9]{5}$", message = "request.pattern.error")
 	private String				ticker;
 }

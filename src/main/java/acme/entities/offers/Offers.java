@@ -39,6 +39,7 @@ public class Offers extends DomainEntity {
 	private Date				deadline;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				description;
 
 	@NotNull
@@ -49,7 +50,7 @@ public class Offers extends DomainEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^[O][a-zA-Z]{4}[-][0-9]{5}$")
+	@Pattern(regexp = "^[O][a-zA-Z]{4}[-][0-9]{5}$", message = "offers.pattern.error")
 	private String				ticker;
 
 }

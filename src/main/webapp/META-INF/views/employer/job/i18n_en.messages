@@ -3,7 +3,7 @@ employer.job.list.label.deadline = Dead-Line
 employer.job.list.label.title = Title
 
 
-employer.job.form.label.reference = Reference:
+employer.job.form.label.reference = Reference(try to fix this pattern: e.g:EMP1-JOB3):
 employer.job.form.label.title = Title:
 employer.job.form.label.deadline = Dead-Line:
 employer.job.form.label.salary = Salary:

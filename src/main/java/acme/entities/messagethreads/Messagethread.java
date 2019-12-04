@@ -4,6 +4,7 @@ package acme.entities.messagethreads;
 import java.util.Collection;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
@@ -36,6 +37,7 @@ public class Messagethread extends DomainEntity {
 	private String					usernames;
 
 	@NotNull
+	@Column(length = 1024)
 	private String					message;
 
 	//Relationships

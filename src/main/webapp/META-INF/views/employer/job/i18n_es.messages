@@ -3,7 +3,7 @@ employer.job.list.label.deadline = Fecha límite
 employer.job.list.label.title = Título
 
 
-employer.job.form.label.reference = Referencia:
+employer.job.form.label.reference = Referencia(intente ajustarse al siguiente patrón: ej.:EMP1-JOB3):
 employer.job.form.label.title = Título:
 employer.job.form.label.deadline = Fecha límite:
 employer.job.form.label.salary = Salario:
