@@ -33,9 +33,6 @@ public class Messagethread extends DomainEntity {
 	@NotNull
 	private String					usernames;
 
-	@NotNull
-	private String					message;
-
 	//Relationships
 
 	@NotNull
@@ -44,7 +41,7 @@ public class Messagethread extends DomainEntity {
 
 	/*
 	 * @NotNull
-	 * 
+	 *
 	 * @OneToMany(mappedBy = "messageThread")
 	 * private Collection<Message> messages;
 	 */

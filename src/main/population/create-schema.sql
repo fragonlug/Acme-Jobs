@@ -200,7 +200,6 @@
     create table `messagethread` (
        `id` integer not null,
         `version` integer not null,
-        `message` varchar(255),
         `moment` datetime(6),
         `title` varchar(255),
         `usernames` varchar(255),
