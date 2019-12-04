@@ -37,6 +37,7 @@ public class Message extends DomainEntity {
 
 	//Relationships
 
+	@NotNull
 	@ManyToOne
 	private Messagethread		messageThread;
 

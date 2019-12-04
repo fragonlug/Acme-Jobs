@@ -4,7 +4,6 @@ package acme.features.authenticated.messagethread;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.messages.Message;
 import acme.entities.messagethreads.Messagethread;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -49,7 +48,7 @@ public class AuthenticatedMessagethreadShowService implements AbstractShowServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "moment", "usernames", "message");
+		request.unbind(entity, model, "title", "moment", "usernames");
 	}
 
 	@Override
@@ -60,9 +59,7 @@ public class AuthenticatedMessagethreadShowService implements AbstractShowServic
 		int id;
 
 		String users = "";
-		String messages = "";
 		int i = 0;
-		int a = 0;
 
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneMessagethreadById(id);
@@ -85,24 +82,25 @@ public class AuthenticatedMessagethreadShowService implements AbstractShowServic
 			i++;
 		}
 
-		for (Message ms : result.getMessages()) {
-			if (a == 0) {
-				if (result.getMessages().size() == 1) {
-					messages = ms.getTitle();
-				} else {
-					messages = ms.getTitle() + ", ";
-				}
-			} else {
-				if (i == result.getMessages().size() - 1) {
-					messages = messages + ms.getTitle();
-				} else {
-					messages = messages + ms.getTitle() + ", ";
-				}
-			}
-			a++;
-		}
+		/*
+		 * for (Message ms : result.getMessages()) {
+		 * if (a == 0) {
+		 * if (result.getMessages().size() == 1) {
+		 * messages = ms.getTitle();
+		 * } else {
+		 * messages = ms.getTitle() + ", ";
+		 * }
+		 * } else {
+		 * if (i == result.getMessages().size() - 1) {
+		 * messages = messages + ms.getTitle();
+		 * } else {
+		 * messages = messages + ms.getTitle() + ", ";
+		 * }
+		 * }
+		 * a++;
+		 * }
+		 */
 
-		result.setMessage(messages);
 		result.setUsernames(users);
 		return result;
 	}

@@ -536,25 +536,85 @@
 	<!-- Jobs -->
 		<!-- Descriptors and duties -->
 		
+		<bean id="job1" class="acme.entities.jobs.Job">
+		<property name="reference" value="EMPA-JOBA"/>
+		<property name="title" value="Title 1"/>
+		<property name="deadline" value="2030/12/11 23:59"/>
+		<property name="salary" value="€ 15,000.00"/>
+		<property name="moreInfo" value="https://www.example.es/"/>
+		<property name="finalMode" value="false"/>
+		<property name="employer" ref="employer1Employer"/>
+		<property name="auditor" ref="audit1Audit"/>
+	</bean>
+	
+	<bean id="job2" class="acme.entities.jobs.Job">
+		<property name="reference" value="EMPB-JOBA"/>
+		<property name="title" value="Title 2"/>
+		<property name="deadline" value="2025/12/11 23:59"/>
+		<property name="salary" value="€ 2,000.10"/>
+		<property name="moreInfo" value="https://www.example.es/"/>
+		<property name="finalMode" value="true"/>
+		<property name="employer" ref="employer2Employer"/>
+		<property name="auditor" ref="audit1Audit"/>
+	</bean>
+	
+	<bean id="job3" class="acme.entities.jobs.Job">
+		<property name="reference" value="EMPA-JOBB"/>
+		<property name="title" value="Title 3"/>
+		<property name="deadline" value="2024/11/01 23:59"/>
+		<property name="salary" value="€ 15,000.00"/>
+		<property name="moreInfo" value="https://www.example.es/"/>
+		<property name="finalMode" value="true"/>
+		<property name="employer" ref="employer1Employer"/>
+		<property name="auditor" ref="audit1Audit"/>
+	</bean>
+	
+	<bean id="job4" class="acme.entities.jobs.Job">
+		<property name="reference" value="EMPB-JOBB"/>
+		<property name="title" value="Title 4"/>
+		<property name="deadline" value="2029/12/11 12:59"/>
+		<property name="salary" value="€ 900,000.00"/>
+		<property name="moreInfo" value="https://www.example.es/"/>
+		<property name="finalMode" value="true"/>
+		<property name="employer" ref="employer2Employer"/>
+		<property name="auditor" ref="audit2Audit"/>
+	</bean>
+	
+	<bean id="job5" class="acme.entities.jobs.Job">
+		<property name="reference" value="EMPA-JOBC"/>
+		<property name="title" value="Title 5"/>
+		<property name="deadline" value="2015/12/11 23:59"/>
+		<property name="salary" value="€ 100.00"/>
+		<property name="moreInfo" value="https://www.example.es/"/>
+		<property name="finalMode" value="true"/>
+		<property name="employer" ref="employer1Employer"/>
+		<property name="auditor" ref="audit2Audit"/>
+	</bean>
+		
 			
 		<bean id="descriptor1" class="acme.entities.descriptor.Descriptor">
 			<property name="description" value="Descriptor description"/>
+			<property name="job" ref="job1"/>
 		</bean>
 		
 		<bean id="descriptor2" class="acme.entities.descriptor.Descriptor">
 			<property name="description" value="Descriptor description"/>
+			<property name="job" ref="job2"/>
 		</bean>
 		
 		<bean id="descriptor3" class="acme.entities.descriptor.Descriptor">
 			<property name="description" value="Descriptor description"/>
+			<property name="job" ref="job3"/>
 		</bean>
 		
 		<bean id="descriptor4" class="acme.entities.descriptor.Descriptor">
 			<property name="description" value="Descriptor description"/>
+			<property name="job" ref="job4"/>
 		</bean>
 		
 		<bean id="descriptor5" class="acme.entities.descriptor.Descriptor">
 			<property name="description" value="Descriptor description"/>
+			<property name="job" ref="job5"/>
 		</bean>
 		
 		<bean id="duty1" class="acme.entities.duties.Duty">
@@ -602,65 +662,7 @@
 		
 		
 		
-	<bean id="job1" class="acme.entities.jobs.Job">
-		<property name="reference" value="EMPA-JOBA"/>
-		<property name="title" value="Title 1"/>
-		<property name="deadline" value="2030/12/11 23:59"/>
-		<property name="salary" value="€ 15,000.00"/>
-		<property name="descriptor" ref="descriptor1"/>
-		<property name="moreInfo" value="https://www.example.es/"/>
-		<property name="finalMode" value="false"/>
-		<property name="employer" ref="employer1Employer"/>
-		<property name="auditor" ref="audit1Audit"/>
-	</bean>
 	
-	<bean id="job2" class="acme.entities.jobs.Job">
-		<property name="reference" value="EMPB-JOBA"/>
-		<property name="title" value="Title 2"/>
-		<property name="deadline" value="2025/12/11 23:59"/>
-		<property name="salary" value="€ 2,000.10"/>
-		<property name="descriptor" ref="descriptor2"/>
-		<property name="moreInfo" value="https://www.example.es/"/>
-		<property name="finalMode" value="true"/>
-		<property name="employer" ref="employer2Employer"/>
-		<property name="auditor" ref="audit1Audit"/>
-	</bean>
-	
-	<bean id="job3" class="acme.entities.jobs.Job">
-		<property name="reference" value="EMPA-JOBB"/>
-		<property name="title" value="Title 3"/>
-		<property name="deadline" value="2024/11/01 23:59"/>
-		<property name="salary" value="€ 15,000.00"/>
-		<property name="descriptor" ref="descriptor3"/>
-		<property name="moreInfo" value="https://www.example.es/"/>
-		<property name="finalMode" value="true"/>
-		<property name="employer" ref="employer1Employer"/>
-		<property name="auditor" ref="audit1Audit"/>
-	</bean>
-	
-	<bean id="job4" class="acme.entities.jobs.Job">
-		<property name="reference" value="EMPB-JOBB"/>
-		<property name="title" value="Title 4"/>
-		<property name="deadline" value="2029/12/11 12:59"/>
-		<property name="salary" value="€ 900,000.00"/>
-		<property name="descriptor" ref="descriptor4"/>
-		<property name="moreInfo" value="https://www.example.es/"/>
-		<property name="finalMode" value="true"/>
-		<property name="employer" ref="employer2Employer"/>
-		<property name="auditor" ref="audit2Audit"/>
-	</bean>
-	
-	<bean id="job5" class="acme.entities.jobs.Job">
-		<property name="reference" value="EMPA-JOBC"/>
-		<property name="title" value="Title 5"/>
-		<property name="deadline" value="2015/12/11 23:59"/>
-		<property name="salary" value="€ 100.00"/>
-		<property name="descriptor" ref="descriptor5"/>
-		<property name="moreInfo" value="https://www.example.es/"/>
-		<property name="finalMode" value="true"/>
-		<property name="employer" ref="employer1Employer"/>
-		<property name="auditor" ref="audit2Audit"/>
-	</bean>
 	
 
 	<!--  Applications -->
@@ -759,14 +761,6 @@
 	</bean>
 	
 	<!-- Messages & threads -->
-	<bean id="message1" class="acme.entities.messages.Message">
-		<property name="title" value="Mensaje 1"/>
-		<property name="moment" value="2019/11/27 17:00"/>
-		<property name="tags" value="#message, #work"/>
-		<property name="body" value="Este es el cuerpo del mensaje"/>
-		<property name="messageThread" ref="messagethread1"/>
-	</bean>
-	
 	<bean id="messagethread1" class="acme.entities.messagethreads.Messagethread">
 		<property name="title" value="Hilo de mensajes 1"/>
 		<property name="moment" value="2019/11/25 12:00"/>
@@ -778,11 +772,15 @@
 				<ref bean="worker1UserAccount"/>
 			</list>
 		</property>
-		<property name="messages">
-			<list>
-				<ref bean="message1"/>
-			</list>
-			</property>
-    </bean>
+	</bean>
+	<bean id="message1" class="acme.entities.messages.Message">
+		<property name="title" value="Mensaje 1"/>
+		<property name="moment" value="2019/11/27 17:00"/>
+		<property name="tags" value="#message, #work"/>
+		<property name="body" value="Este es el cuerpo del mensaje"/>
+		<property name="messageThread" ref="messagethread1"/>
+	</bean>
+	
+	
 
 </beans>
