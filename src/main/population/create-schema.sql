@@ -11,7 +11,7 @@
         `version` integer not null,
         `moment` datetime(6),
         `more_info` varchar(255),
-        `text` varchar(255),
+        `text` varchar(1024),
         `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -27,10 +27,10 @@
        `id` integer not null,
         `version` integer not null,
         `moment` datetime(6),
-        `qualifications` varchar(255),
+        `qualifications` varchar(1024),
         `reference` varchar(255),
-        `skills` varchar(255),
-        `statement` varchar(255),
+        `skills` varchar(1024),
+        `statement` varchar(1024),
         `status` varchar(255),
         `job_id` integer not null,
         `worker_id` integer not null,
@@ -42,14 +42,14 @@
         `version` integer not null,
         `user_account_id` integer,
         `firm` varchar(255),
-        `resp_statement` varchar(255),
+        `resp_statement` varchar(1024),
         primary key (`id`)
     ) engine=InnoDB;
 
     create table `auditrecord` (
        `id` integer not null,
         `version` integer not null,
-        `body` varchar(255),
+        `body` varchar(1024),
         `moment` datetime(6),
         `status` bit,
         `title` varchar(255),
@@ -77,10 +77,10 @@
        `id` integer not null,
         `version` integer not null,
         `deadline` datetime(6),
-        `description` varchar(255),
-        `goal_bronze` varchar(255),
-        `goal_gold` varchar(255),
-        `goal_silver` varchar(255),
+        `description` varchar(1024),
+        `goal_bronze` varchar(1024),
+        `goal_gold` varchar(1024),
+        `goal_silver` varchar(1024),
         `reward_bronze_amount` double precision,
         `reward_bronze_currency` varchar(255),
         `reward_gold_amount` double precision,
@@ -106,7 +106,7 @@
        `id` integer not null,
         `version` integer not null,
         `ceo` varchar(255),
-        `description` varchar(255),
+        `description` varchar(1024),
         `email` varchar(255),
         `incorporated` bit,
         `name` varchar(255),
@@ -149,7 +149,7 @@
     create table `descriptor` (
        `id` integer not null,
         `version` integer not null,
-        `description` varchar(255),
+        `description` varchar(1024),
         `job_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
@@ -157,7 +157,7 @@
     create table `duty` (
        `id` integer not null,
         `version` integer not null,
-        `description` varchar(255),
+        `description` varchar(1024),
         `percentage` double precision,
         `title` varchar(255),
         `descriptor_id` integer,
@@ -179,7 +179,7 @@
         `name` varchar(255),
         `number_stars` integer,
         `sector` varchar(255),
-        `statement` varchar(255),
+        `statement` varchar(1024),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -201,7 +201,7 @@
     create table `message` (
        `id` integer not null,
         `version` integer not null,
-        `body` varchar(255),
+        `body` varchar(1024),
         `moment` datetime(6),
         `tags` varchar(255),
         `title` varchar(255),
@@ -233,7 +233,7 @@
        `id` integer not null,
         `version` integer not null,
         `deadline` datetime(6),
-        `description` varchar(255),
+        `description` varchar(1024),
         `lower_range_amount` double precision,
         `lower_range_currency` varchar(255),
         `major_range_amount` double precision,
@@ -257,7 +257,7 @@
        `id` integer not null,
         `version` integer not null,
         `dead_line` datetime(6),
-        `description` varchar(255),
+        `description` varchar(1024),
         `moment` datetime(6),
         `reward_amount` double precision,
         `reward_currency` varchar(255),
@@ -295,8 +295,8 @@
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
-        `qualification_record` varchar(255),
-        `skill_record` varchar(255),
+        `qualification_record` varchar(1024),
+        `skill_record` varchar(1024),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -308,6 +308,9 @@
 
     alter table `application` 
        add constraint UK_ct7r18vvxl5g4c4k7aefpa4do unique (`reference`);
+
+    alter table `credit_card` 
+       add constraint UK_4cr95y27s8ti6otoyflmma6oy unique (`sponsor_id`);
 
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);

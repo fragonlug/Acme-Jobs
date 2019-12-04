@@ -40,7 +40,7 @@ public class Application extends DomainEntity {
 	private Date				moment;
 
 	@NotBlank
-	@Pattern(regexp = "^(pending)|(accepted)|(rejected)$", message = "application.pattern.error")
+	@Pattern(regexp = "^(pending)|(accepted)|(rejected)$", message = "It must be pending, accepted or rejected.")
 	private String				status;
 
 	@NotBlank

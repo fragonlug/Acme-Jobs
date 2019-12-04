@@ -49,6 +49,6 @@ public class Request extends DomainEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^[R][a-zA-Z]{4}[-][0-9]{5}$", message = "request.pattern.error")
+	@Pattern(regexp = "^[R][a-zA-Z]{4}[-][0-9]{5}$", message = "It must follow the next structure OABCD-00001")
 	private String				ticker;
 }
