@@ -1,4 +1,3 @@
-
 package acme.entities.messagethreads;
 
 import java.util.Collection;
@@ -48,3 +47,4 @@ public class Messagethread extends DomainEntity {
 	 */
 	//select ua, mt from UserAccount ua join ua.messagethread mt group by mt;
 }
+

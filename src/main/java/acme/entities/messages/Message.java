@@ -31,6 +31,7 @@ public class Message extends DomainEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				moment;
 
+	@NotBlank
 	private String				tags;
 
 	@NotBlank

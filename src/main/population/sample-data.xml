@@ -268,7 +268,6 @@
 	
 	<bean name="sponsor1Sponsor" class="acme.entities.roles.Sponsor">
 			<property name="orgName" value="Sponsor 1,Inc."/>
-			<property name="creditCard" value="4716826134105316"/>
 			<property name="userAccount" ref="sponsor1UserAccount"/>
 	</bean>
 	
@@ -303,6 +302,16 @@
 	
 	<bean name="sponsor2Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="sponsor2UserAccount" />
+	</bean>
+	
+	<!--CreditCard  -->
+	<bean id="Creditcard01" class="acme.entities.creditcard.CreditCard">
+		<property name="creditNumber" value="4716826134105316"/>
+		<property name="name" value="Sponsor"/>
+		<property name="surname" value="Example"/>
+		<property name="expiration" value="2022/07/10 00:00"/>
+		<property name="securityCode" value="281"/>
+		<property name="sponsor" ref="sponsor1Sponsor"/>
 	</bean>
 	
 	<!--Non Comercial Banner  -->

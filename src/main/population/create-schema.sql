@@ -134,6 +134,18 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `credit_card` (
+       `id` integer not null,
+        `version` integer not null,
+        `credit_number` varchar(255),
+        `expiration` datetime(6),
+        `name` varchar(255),
+        `security_code` varchar(255),
+        `surname` varchar(255),
+        `sponsor_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `descriptor` (
        `id` integer not null,
         `version` integer not null,
@@ -258,7 +270,6 @@
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
-        `credit_card` varchar(255),
         `org_name` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -354,6 +365,11 @@
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `credit_card` 
+       add constraint `FK31l5hvh7p1nx1aw6v649gw3rc` 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
 
     alter table `descriptor` 
        add constraint `FKgfulfilmwi4hhaquiu7fr5g0g` 
